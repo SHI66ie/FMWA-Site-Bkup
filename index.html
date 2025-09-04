@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federal Ministry of Women Affairs</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/2025_07_14_13_42_IMG_2808.PNG">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=1.0.1">
+    <link rel="stylesheet" href="css/header.css?v=1.0.1">
+    <link rel="stylesheet" href="css/welcome.css?v=1.0.1">
+    <link rel="stylesheet" href="css/news.css?v=1.0.1">
+    <!-- Carousel Styles -->
+    <link rel="stylesheet" href="css/carousel-styles.css">
+    <link rel="stylesheet" href="css/general.css?v=1.0.1">
+    <link rel="stylesheet" href="css/footer.css?v=1.0.1">
+    <link rel="stylesheet" href="css/downloads.css?v=1.0.1">
+    <link rel="stylesheet" href="css/leadership.css?v=1.0.1">
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <!-- Start scrolling immediately -->
+    <script>
+    (function() {
+        // Create style element for critical animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes scrollText {
+                0% { transform: translateX(100%); }
+                100% { transform: translateX(-100%); }
+            }
+            .scrolling-text.animate {
+                animation: scrollText 60s linear infinite;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Start animation as soon as possible
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollingText = document.querySelector('.scrolling-text');
+            if (scrollingText) {
+                // Use requestAnimationFrame to ensure the browser is ready
+                requestAnimationFrame(() => {
+                    scrollingText.classList.add('animate');
+                });
+            }
+        });
+    })();
+    </script>
+    
+    <!-- Carousel Initialization -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize carousel with autoplay
+        var myCarousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
+            interval: 5000, // Change slide every 5 seconds
+            wrap: true,
+            touch: true
+        });
+        
+        // Pause autoplay when hovering over the carousel
+        var carouselElement = document.getElementById('heroCarousel');
+        carouselElement.addEventListener('mouseenter', function() {
+            myCarousel.pause();
+        });
+        carouselElement.addEventListener('mouseleave', function() {
+            myCarousel.cycle();
+        });
+    });
+    </script>
+    
+    <!-- YouTube API -->
+    <script src="js/youtube-api.js"></script>
+    
+    <!-- Initialize Bootstrap dropdowns with submenu support -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize all dropdowns
+        var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+            return new bootstrap.Dropdown(dropdownToggleEl, {
+                autoClose: 'outside',
+                popperConfig: function(defaultBsPopperConfig) {
+                    return {
+                        ...defaultBsPopperConfig,
+                        strategy: 'fixed'
+                    };
+                }
+            });
+        });
+
+        // Handle submenu hover for desktop
+        if (window.innerWidth >= 992) {
+            // Main dropdown hover
+            document.querySelectorAll('.dropdown, .dropdown-submenu').forEach(function(element) {
+                element.addEventListener('mouseenter', function(e) {
+                    const toggle = this.querySelector('.dropdown-toggle');
+                    if (toggle) {
+                        const dropdown = bootstrap.Dropdown.getInstance(toggle);
+                        if (dropdown) {
+                            // Close any open dropdowns at this level
+                            const parentNav = this.closest('.dropdown-menu');
+                            if (parentNav) {
+                                parentNav.querySelectorAll('.dropdown-menu').forEach(menu => {
+                                    if (menu !== this.querySelector('.dropdown-menu')) {
+                                        const toggleBtn = menu.previousElementSibling;
+                                        if (toggleBtn && toggleBtn.matches('.dropdown-toggle')) {
+                                            const dd = bootstrap.Dropdown.getInstance(toggleBtn);
+                                            if (dd) dd.hide();
+                                        }
+                                    }
+                                });
+                            }
+                            dropdown.show();
+                        }
+                    }
+                });
+
+                element.addEventListener('mouseleave', function(e) {
+                    // Only hide if not hovering over a child dropdown
+                    if (!this.contains(e.relatedTarget) || !e.relatedTarget) {
+                        const toggle = this.querySelector('.dropdown-toggle');
+                        if (toggle) {
+                            const dropdown = bootstrap.Dropdown.getInstance(toggle);
+                            if (dropdown) dropdown.hide();
+                        }
+                    }
+                });
+            });
+        }
+        
+        // Handle touch events for mobile
+        document.addEventListener('click', function(e) {
+            const target = e.target;
+            if (window.innerWidth < 992) {
+                // Handle dropdown toggle on mobile
+                if (target.matches('.dropdown-toggle')) {
+                    e.preventDefault();
+                    const dropdown = bootstrap.Dropdown.getInstance(target);
+                    if (dropdown) {
+                        dropdown.toggle();
+                    }
+                }
+            }
+        });
+    });
+    </script>
+
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    
+
+    <!-- Main Navigation -->
+    
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-nav px-0">
+        <div class="container-fluid gx-0">
+            <a class="navbar-brand d-flex align-items-center me-0" href="index.html">
+                <img src="./images/2025_07_14_13_42_IMG_2808.PNG" alt="Federal Ministry of Women Affairs Logo" class="fmwa-logo">
+                <span class="logo-divider"></span>
+                <span class="fmwa-navbar-title">FEDERAL MINISTRY OF WOMEN AFFAIRS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation menu" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" title="Go to home page">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" title="Learn about the ministry" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="about.html#mandate-section" title="View our mandate">Mandate</a></li>
+                            <li><a class="dropdown-item" href="about.html#mission-section" title="Read our mission">Mission</a></li>
+                            <li><a class="dropdown-item" href="about.html#vision-section" title="Learn about our vision">Vision</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="organogram.html" title="View our organizational structure">Organogram</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="departmentsDropdown" role="button" data-bs-toggle="dropdown" title="Explore our departments and divisions" aria-expanded="false">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+                            <li><a class="dropdown-item" href="womendevelopment.html" title="Women Development">Women Development</a></li>
+                            <li><a class="dropdown-item" href="departments/child-development.html" title="Child Development">Child Development</a></li>
+                            <li><a class="dropdown-item" href="departments/community-development-social-intervention.html" title="Community Development & Social Intervention">Community Development & Social Intervention</a></li>
+                            <li><a class="dropdown-item" href="departments/gender-affairs.html" title="Gender Affairs">Gender Affairs</a></li>
+                            <li><a class="dropdown-item" href="departments/nutrition.html" title="Nutrition">Nutrition</a></li>
+                            <li><a class="dropdown-item" href="departments/general-services.html" title="General Services">General Services</a></li>
+                            <li><a class="dropdown-item" href="departments/planning-research-statistics.html" title="Planning, Research & Statistics">Planning, Research & Statistics</a></li>
+                            <li><a class="dropdown-item" href="departments/finance-accounting.html" title="Finance & Accounting">Finance & Accounting</a></li>
+                            <li><a class="dropdown-item" href="departments/procurement.html" title="Procurement">Procurement</a></li>
+                            <li><a class="dropdown-item" href="departments/reform-coordination-service-improvement.html" title="Reform Coordination & Service Improvement">Reform Coordination & Service Improvement</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" title="Divisions">Divisions</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" title="Legal Services">Legal Services</a></li>
+                                    <li><a class="dropdown-item" href="#" title="Press Unit">Press Unit</a></li>
+                                    <li><a class="dropdown-item" href="#" title="Internal Audit">Internal Audit</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item hidden-nav-item"><a class="nav-link" href="#" title="View our programs">Programs</a></li>
+                    <li class="nav-item hidden-nav-item"><a class="nav-link" href="#" title="Read our latest news">News</a></li>
+                    <li class="nav-item hidden-nav-item"><a class="nav-link" href="#" title="Contact us">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="scrolling-text-container">
+                <div class="scrolling-text">
+                    <i class="fas fa-bullhorn"></i>
+                    Welcome to the Federal Ministry of Women Affairs - Empowering Women, Transforming Lives &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="maintenance-notice">
+                        <i class="fas fa-tools me-1"></i>
+                        <strong>NOTICE:</strong> Website under maintenance &nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                    <i class="fas fa-star"></i>
+                    Latest Updates: New initiatives for women's empowerment launching soon! &nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fas fa-calendar-alt"></i>
+                    Upcoming Events: National Women's Conference 2025 - Register Now! &nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-5">
+        <div class="container">
+            <div id="heroCarousel" class="carousel slide">
+                <div class="carousel-inner" aria-live="polite">
+                    <div class="carousel-item active">
+                        <div class="image-container d-flex justify-content-center">
+                            <img src="images/2025_07_11_16_37_IMG_2804.JPG" alt="FMWA Event" class="img-fluid me-2">
+                            <img src="images/2025_07_11_16_39_IMG_2805.JPG" alt="FMWA Event" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container d-flex justify-content-center">
+                            <img src="images/2025_07_11_16_40_IMG_2806.JPG" alt="FMWA Event" class="img-fluid me-2">
+                            <img src="images/2025_07_11_16_37_IMG_2804.JPG" alt="FMWA Event" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container d-flex justify-content-center">
+                            <img src="images/2025_07_11_16_39_IMG_2805.JPG" alt="FMWA Event" class="img-fluid me-2">
+                            <img src="images/2025_07_11_16_40_IMG_2806.JPG" alt="FMWA Event" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Leadership</h2>
+            
+            <div class="row justify-content-center">
+                <!-- Minister -->
+                <div class="col-md-5 mb-4 mb-md-0">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="profile-image-container minister mx-auto">
+                                <img src="images/imaan_sulaiman.jpg" class="profile-image" alt="Hajiya Imaan Sulaiman-Ibrahim">
+                            </div>
+                            <h5 class="text-muted mb-2">Honourable Minister</h5>
+                            <h4 class="mb-3">Hajiya Imaan Sulaiman-Ibrahim</h4>
+                            <p class="card-text">Hajiya Imaan Sulaiman-Ibrahim is the Honourable Minister of Women Affairs, appointed to oversee the affairs of the Federal Ministry of Women Affairs. With a strong background in public service and a passion for women's empowerment, she is committed to advancing gender equality, protecting women's rights, and implementing policies that promote the welfare of women and children across Nigeria.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Permanent Secretary -->
+                <div class="col-md-5">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="profile-image-container mx-auto">
+                                <img src="images/2025_07_11_16_37_IMG_2803.JPG" class="profile-image" alt="Dr. Maryam Ismaila Keshinro">
+                            </div>
+                            <h5 class="text-muted mb-2">Permanent Secretary</h5>
+                            <h4 class="mb-3">Dr. Maryam Ismaila Keshinro</h4>
+                            <p class="card-text">Dr. Maryam Ismaila Keshinro serves as the Permanent Secretary of the Federal Ministry of Women Affairs, bringing extensive experience in public administration and policy implementation. She works closely with the Honourable Minister to ensure the effective execution of policies and programs that advance gender equality, women's empowerment, and the protection of women's and children's rights across Nigeria.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div id="mandate-section" class="feature-box">
+                        <h3><i class="fas fa-landmark me-2"></i>Our Mandate</h3>
+                        <p>The broad mandate of the Ministry is to advise government on Gender and Children issues. Issues affecting Persons with Disabilities and the Aged; initiate policy guidelines and lead the process of gender equality and mainstreaming at both the National and International levels.</p>
+                        
+                        <a href="mandate.html" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div id="vision-section" class="feature-box">
+                        <h3><i class="fas fa-eye me-2"></i>Our Vision</h3>
+                        <p>To help build a Nigerian Society that guarantees equal access to social, economic and wealth creation opportunities to all, irrespective of gender, places premium on protection of the child, the aged and persons with disabilities; focuses attention of key operators in both private and public sectors on mainstreaming the concerns of these groups of people in national development process.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div id="mission-section" class="feature-box">
+                        <h3><i class="fas fa-bullseye me-2"></i>Our Mission</h3>
+                        <p>To help build a Nigerian Society that guarantees equal access to social, economic and wealth creation opportunities to all, irrespective of gender, places premium on protection of the child, the aged and persons with disabilities; focuses attention of key operators in both private and public sectors on mainstreaming the concerns of these groups of people in national development process.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-box">
+                        <h3><i class="fas fa-users me-2"></i>Who We Are</h3>
+                        <p>Federal Ministry of Women Affairs and Social Development was created consequent upon of the response to The United Nations agreement to establish Institutional Mechanisms for the...</p>
+                        <a href="about.html" class="read-more" target="_blank" rel="noopener noreferrer">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- YouTube Videos Section Removed -->
+
+    <!-- Quick Links Panel -->
+    <section class="quick-links-panel py-4 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="bg-white rounded shadow-sm overflow-hidden">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/bcVwzskL0PI?si=CDbKSdK6RGx4ZHRj" 
+                                    title="Latest Announcements Video" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen
+                                    class="w-100">
+                            </iframe>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white rounded shadow-sm overflow-hidden">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/DDfjkhRuLKA?si=ik_A9beQqziIKpy_" 
+                                    title="Upcoming Events Video" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen
+                                    class="w-100">
+                            </iframe>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white rounded shadow-sm overflow-hidden">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/eq7B3EjqYuU?si=ZrPFc7pMlsN_BekL" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen 
+                                    class="w-100">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Updates -->
+    <section class="news-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="section-title">Latest News & Updates</h2>
+                    <div class="news-grid">
+                        <!-- ACTU Committee Inauguration -->
+                        <div class="col-md-6 mb-4">
+                            <div class="news-item">
+                                <img src="/latest-news/IMG-20250731-WA0019.jpg" alt="ACTU Committee Inauguration" class="img-fluid" onerror="this.style.display='none'">
+                                <span class="news-date"><i class="far fa-calendar-alt me-2"></i>July 30, 2025</span>
+                                <h4 class="news-title">FMWA Inaugurates ACTU Committee to Bolster Transparency and Ethical Governance</h4>
+                                <p>In a landmark move toward institutional integrity, the Federal Ministry of Women Affairs inaugurated its Anti-Corruption and Transparency Unit (ACTU) Committee.</p>
+                                <a href="press-release-actu-inauguration.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- Press Statement - Super Falcons WAFCON Victory -->
+                        <div class="col-md-6 mb-4">
+                            <div class="news-item">
+                                <img src="/latest-news/2025-07-28at12.08.39PM.jpeg" alt="Super Falcons WAFCON Victory" class="img-fluid">
+                                <span class="news-date"><i class="far fa-calendar-alt me-2"></i>July 26, 2025</span>
+                                <h4 class="news-title">Women Affairs Minister Congratulates Super Falcons on Historic 10th WAFCON Victory</h4>
+                                <p>The Honourable Minister of Women Affairs, Hon. Imaan Sulaiman Ibrahim, congratulates Nigeria's Super Falcons on their record-breaking victory.</p>
+                                <a href="press-statement-super-falcons.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="news-item">
+                                <img src="images/news1.jpg" alt="News 1" class="img-fluid">
+                                <span class="news-date"><i class="far fa-calendar-alt me-2"></i>July 10, 2025</span>
+                                <h4 class="news-title">Government Approves New Public Service Reform Initiative</h4>
+                                <p>The government has approved a comprehensive reform package aimed at enhancing efficiency in the public service.</p>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="news-item">
+                                <img src="images/news3.jpg" alt="News 3" class="img-fluid">
+                                <span class="news-date"><i class="far fa-calendar-alt me-2"></i>June 28, 2025</span>
+                                <h4 class="news-title">Public Servants to Undergo Capacity Building</h4>
+                                <p>A new capacity building initiative has been introduced to enhance the skills of public servants across all levels.</p>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="news-item">
+                                <img src="images/news4.jpg" alt="News 4" class="img-fluid">
+                                <span class="news-date"><i class="far fa-calendar-alt me-2"></i>June 15, 2025</span>
+                                <h4 class="news-title">Government Partners with Private Sector on Training</h4>
+                                <p>New partnership announced to provide specialized training for public servants in collaboration with leading private sector organizations.</p>
+                                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section class="downloads-section py-3 bg-light">
+        <div class="container">
+            <h2 class="section-title">Publications & Downloads</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-file-pdf fa-2x mb-2"></i>
+                            <h5>Public Service Rules</h5>
+
+                            <a href="/downloadables/PSR_2021_EDITION.pdf" class="btn btn-outline-primary btn-sm" download>Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-file-word fa-2x mb-2"></i>
+                            <h5>Annual Report 2024</h5>
+                            <p class="text-muted small mb-2">Published: January 2025</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Download DOC</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-file-excel fa-3x text-success mb-3"></i>
+                            <h5>Performance Data</h5>
+                            <p class="text-muted small">Q2 2025</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Download XLS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-file-archive fa-3x text-warning mb-3"></i>
+                            <h5>Policy Documents</h5>
+                            <p class="text-muted small">Collection (ZIP)</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Download ZIP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <a href="#" class="btn btn-success">View All Publications</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="py-5 text-white stats-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="display-4 fw-bold">50+</div>
+                    <p>MDAs Served</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="display-4 fw-bold">150K+</div>
+                    <p>Public Servants</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="display-4 fw-bold">24/7</div>
+                    <p>Service Delivery</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="display-4 fw-bold">100+</div>
+                    <p>Training Programs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-widget">
+                        <h4>Federal Ministry of Women Affairs</h4>
+                        <p>Empowering women for national development</p>
+                        <div class="social-links mt-3">
+                            <a href="https://www.facebook.com/FMWAngr" target="_blank" rel="noopener noreferrer" class="me-2" title="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/FMWA_ng" target="_blank" rel="noopener noreferrer" class="me-2" title="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/FMWAngr" target="_blank" rel="noopener noreferrer" class="me-2" title="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="http://www.youtube.com/@fmwangr" target="_blank" rel="noopener noreferrer" class="me-2" title="Watch us on YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-widget">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="https://webmail.womenaffairs.gov.ng/" target="_blank" rel="noopener" title="Access Staff Email Services">Staff Email Services</a></li>
+                            <li><a href="#" title="Go to home page">Home</a></li>
+                            <li><a href="about.html" title="Learn about us">About Us</a></li>
+                            <li><a href="#" title="View our services">Services</a></li>
+                            <li><a href="#" title="Access resources">Resources</a></li>
+                            <li><a href="#">News & Events</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 ms-auto">
+                    <div class="footer-widget">
+                        <h4>Contact Us</h4>
+                        <address>
+                            <p><i class="fas fa-map-marker-alt me-2"></i> Plot 1070, Central Business District, Cadastral Zone AO, Shehu Shagari Way, by Ralph Shodeinde Street, opposite the Court of Appeal, in Abuja, FCT</p>
+                            <p class="mb-2"><i class="fas fa-envelope me-2"></i> info@womenaffairs.gov.ng</p>
+                            <p><i class="fas fa-clock me-2"></i> Mon - Fri: 8:00 AM - 4:00 PM</p>
+                        </address>
+                        <div class="mt-4">
+                            <h5>Newsletter</h5>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                                <button class="btn btn-warning" type="button">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        &copy; 2025 Federal Ministry of Women Affairs. All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/highlight-section.js"></script>
+    <script src="js/cookie-consent.js"></script>
+    <script>
+    // Carousel JavaScript removed
+    </script>
+    <script src="js/division-submenu.js"></script>
+    <script src="js/shrink-dropdown-options.js"></script>
+    <script src="js/dropdown-tooltip.js"></script>
+    <script src="js/remove-latest-news.js"></script>
+    <script src="js/dropdown-click.js"></script>
+</html>

@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+/* For organogram.html, add spacing only to the main content */
+.page-content {
+    padding: 40px 0 40px 0;
+}
+
+/* Ensure navbar and footer are flush with edges */
+.navbar.main-nav,
+footer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.footer-widget h4, .footer-widget h5 {
+    color: #fff;
+}
+h1, h2 {
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.org-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+.org-table th, .org-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+.org-table th {
+    background: #f5f5f5;
+}
+.org-header {
+    font-weight: bold;
+    background: #e8e8e8;
+}
+.org-centered-title {
+    text-align: center;
+    font-weight: bold;
+}

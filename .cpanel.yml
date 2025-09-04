@@ -1,0 +1,19 @@
+---
+# cPanel deployment configuration
+# This file tells cPanel what to do each time it detects a new commit.
+# Adjust Node version path if your account uses a different one (ea-nodejs18, etc.)
+
+deployment:
+  tasks:
+    # Log which commit is being deployed (visible in cPanel -> Deployment History)
+    - /usr/bin/env echo "Deploying $${DEPLOYMENT_BRANCH}@$${DEPLOYMENT_HASH}"
+
+    # Install production dependencies; if there is no package.json this is a no-op
+    - /usr/bin/env npm install --production --ignore-scripts || /bin/true
+
+    # Optional: build step (uncomment if you add a build script later)
+    # - /usr/bin/env npm run build
+
+    # Restart the Node.js app managed by cPanel Application Manager
+    # Re-touching restart.txt tells Passenger to reload the application
+    - /usr/bin/env mkdir -p tmp && /usr/bin/env touch tmp/restart.txt

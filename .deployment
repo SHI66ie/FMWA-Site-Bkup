@@ -1,0 +1,45 @@
+[deployment]
+; Deployment configuration for FMWA Website
+
+; 1. Required PHP Version
+php_version = "8.0+"
+
+; 2. Required Extensions
+required_extensions = "pdo, pdo_mysql, mbstring, fileinfo, gd, openssl"
+
+; 3. Directory Structure
+[directories]
+; Make these directories writable
+writable_dirs = "images/uploads, storage, cache"
+
+; 4. File Permissions
+[permissions]
+; Set these permissions after upload
+files = 644
+directories = 755
+
+; 5. Environment Configuration
+[environment]
+; Copy .env.example to .env and update these values
+required_env_vars = "DB_HOST, DB_NAME, DB_USER, DB_PASS, APP_ENV, APP_KEY"
+
+; 6. Deployment Hooks
+[hooks]
+; Commands to run after deployment
+post_deploy = [
+    "composer install --no-dev --optimize-autoloader",
+    "php artisan config:cache",
+    "php artisan route:cache",
+    "php artisan view:cache"
+]
+
+; 7. Ignore these files/folders during deployment
+[ignore]
+files = [
+    ".env",
+    ".git",
+    ".gitignore",
+    "node_modules",
+    "*.log",
+    "*.sql"
+]

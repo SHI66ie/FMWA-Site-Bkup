@@ -1,0 +1,17 @@
+# Allow all web crawlers to access all parts of the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://fmwa.gov.ng/sitemap.xml
+
+# Disallow crawling of admin and system files
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /node_modules/
+Disallow: /vendor/
+Disallow: /*.json$
+Disallow: /*.lock$
+
+# Crawl-delay: 10  # Uncomment if needed to limit crawl rate

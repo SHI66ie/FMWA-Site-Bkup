@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organogram - Federal Ministry of Women Affairs</title>
+    <link rel="icon" type="image/png" href="images/2025_07_14_13_42_IMG_2808.PNG">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/downloads.css">
+    <link rel="stylesheet" href="css/leadership.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+            return new bootstrap.Dropdown(dropdownToggleEl, {
+                autoClose: 'outside',
+                popperConfig: function(defaultBsPopperConfig) {
+                    return {
+                        ...defaultBsPopperConfig,
+                        strategy: 'fixed'
+                    };
+                }
+            });
+        });
+        if (window.innerWidth >= 992) {
+            document.querySelectorAll('.dropdown, .dropdown-submenu').forEach(function(element) {
+                element.addEventListener('mouseenter', function(e) {
+                    const toggle = this.querySelector('.dropdown-toggle');
+                    if (toggle) {
+                        const dropdown = bootstrap.Dropdown.getInstance(toggle);
+                        if (dropdown) {
+                            const parentNav = this.closest('.dropdown-menu');
+                            if (parentNav) {
+                                parentNav.querySelectorAll('.dropdown-menu').forEach(menu => {
+                                    if (menu !== this.querySelector('.dropdown-menu')) {
+                                        const toggleBtn = menu.previousElementSibling;
+                                        if (toggleBtn && toggleBtn.matches('.dropdown-toggle')) {
+                                            const dd = bootstrap.Dropdown.getInstance(toggleBtn);
+                                            if (dd) dd.hide();
+                                        }
+                                    }
+                                });
+                            }
+                            dropdown.show();
+                        }
+                    }
+                });
+                element.addEventListener('mouseleave', function(e) {
+                    if (!this.contains(e.relatedTarget) || !e.relatedTarget) {
+                        const toggle = this.querySelector('.dropdown-toggle');
+                        if (toggle) {
+                            const dropdown = bootstrap.Dropdown.getInstance(toggle);
+                            if (dropdown) dropdown.hide();
+                        }
+                    }
+                });
+            });
+        }
+        document.addEventListener('click', function(e) {
+            const target = e.target;
+            if (window.innerWidth < 992) {
+                if (target.matches('.dropdown-toggle')) {
+                    e.preventDefault();
+                    const dropdown = bootstrap.Dropdown.getInstance(target);
+                    if (dropdown) {
+                        dropdown.toggle();
+                    }
+                }
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <!-- Main Navigation -->
+    
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-nav px-0">
+        <div class="container-fluid gx-0">
+            <a class="navbar-brand d-flex align-items-center me-0" href="index.html">
+                <img src="images/2025_07_14_13_42_IMG_2808.PNG" alt="Federal Ministry of Women Affairs Logo" class="fmwa-logo-stretch">
+                <span class="logo-divider"></span>
+                <span class="fmwa-navbar-title">FEDERAL MINISTRY OF WOMEN AFFAIRS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation menu" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" title="Go to home page">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" title="Learn about the ministry" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="about.html#mandate-section" title="View our mandate">Mandate</a></li>
+                            <li><a class="dropdown-item" href="about.html#mission-section" title="Read our mission">Mission</a></li>
+                            <li><a class="dropdown-item" href="about.html#vision-section" title="Learn about our vision">Vision</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="organogram.html" title="View our organizational structure">Organogram</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="departmentsDropdown" role="button" data-bs-toggle="dropdown" title="Explore our departments and divisions" aria-expanded="false">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+                            <li><a class="dropdown-item" href="womendevelopment.html" title="Women Development">Women Development</a></li>
+                            <li><a class="dropdown-item" href="departments/child-development.html" title="Child Development">Child Development</a></li>
+                            <li><a class="dropdown-item" href="departments/community-development-social-intervention.html" title="Community Development & Social Intervention">Community Development & Social Intervention</a></li>
+                            <li><a class="dropdown-item" href="departments/gender-affairs.html" title="Gender Affairs">Gender Affairs</a></li>
+                            <li><a class="dropdown-item" href="departments/nutrition.html" title="Nutrition">Nutrition</a></li>
+                            <li><a class="dropdown-item" href="departments/general-services.html" title="General Services">General Services</a></li>
+                            <li><a class="dropdown-item" href="departments/planning-research-statistics.html" title="Planning, Research & Statistics">Planning, Research & Statistics</a></li>
+                            <li><a class="dropdown-item" href="departments/finance-accounting.html" title="Finance & Accounting">Finance & Accounting</a></li>
+                            <li><a class="dropdown-item" href="departments/procurement.html" title="Procurement">Procurement</a></li>
+                            <li><a class="dropdown-item" href="departments/reform-coordination-service-improvement.html" title="Reform Coordination & Service Improvement">Reform Coordination & Service Improvement</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" title="Divisions">Divisions</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" title="Legal Services">Legal Services</a></li>
+                                    <li><a class="dropdown-item" href="#" title="Press Unit">Press Unit</a></li>
+                                    <li><a class="dropdown-item" href="#" title="Internal Audit">Internal Audit</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item hidden-nav-item"><a class="nav-link" href="#" title="View our programs">Programs</a></li>
+                    <li class="nav-item hidden-nav-item"><a class="nav-link" href="#" title="Read our latest news">News</a></li>
+                    <li class="nav-item hidden-nav-item"><a class="nav-link" href="#" title="Contact us">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Organogram Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h2 class="h4 card-title mb-4 text-center">Organizational Structure</h2>
+                            <style>.organogram-structure{display:none;}</style>
+<div class="text-center">
+    <img src="images/organogram_final.png" alt="Organogram – Federal Ministry of Women Affairs" class="img-fluid">
+</div>
+<!-- Removed old organogram structure -->
+    <!-- Minister to Perm Sec vertical line -->
+    <div class="org-line-vertical org-line-minister-permsec"></div>
+    <!-- Perm Sec to Units horizontal line -->
+    <div class="org-line-horizontal org-line-permsec-units"></div>
+    <!-- Perm Sec to Departments vertical line -->
+    <div class="org-line-vertical org-line-permsec-departments"></div>
+    <div class="org-level org-minister mb-3">
+        <div class="org-box fw-bold">Honourable Minister</div>
+    </div>
+    <div class="org-level org-permsec mb-3">
+        <div class="org-box">Permanent Secretary</div>
+    </div>
+    <div class="org-level org-units mb-4 d-flex justify-content-center">
+        <div class="org-box org-units-box text-start">
+            <span class="fw-bold">Units</span>
+            <ul class="mb-0 ps-3 text-start">
+                <li>Legal</li>
+                <li>Information and Protocol</li>
+                <li>Internal Audit</li>
+                <li>Reforms</li>
+                <li>Procurement</li>
+                <li>Servicom Unit</li>
+                <li>Anti-corruption Unit</li>
+                <li>Special Duties</li>
+            </ul>
+        </div>
+    </div>
+    <div class="org-level org-departments row justify-content-center mb-4">
+        <div class="col-md-2 mb-3">
+            <div class="org-box">Economic Services Department
+                <div class="org-subbox">Human Res. & Capacity Building Division</div>
+                <div class="org-subbox">Women Cooperative & Women Organization Division</div>
+            </div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <div class="org-box">Child Development
+                <div class="org-subbox">Participation & Protection Service Division</div>
+                <div class="org-subbox">Orphans and Vulnerable Children Division</div>
+            </div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <div class="org-box">Social Welfare Department
+                <div class="org-subbox">General Welfare Division</div>
+                <div class="org-subbox">Social Protection Services Division</div>
+            </div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <div class="org-box">Rehabilitation Department
+                <div class="org-subbox">Vocational Training Resettlement Division</div>
+                <div class="org-subbox">Tech. Support Service Division</div>
+            </div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <div class="org-box">Planning Research & Statistics
+                <div class="org-subbox">Planning & Monitoring Division</div>
+                <div class="org-subbox">Research & Statistics Division</div>
+            </div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <div class="org-box">Human Resources Management
+                <div class="org-subbox">Appointment, Promotion & Discipline Division</div>
+                <div class="org-subbox">Training & Staff Welfare Division</div>
+            </div>
+        </div>
+        <div class="col-md-2 mb-3">
+            <div class="org-box">Finance & Accounts
+                <div class="org-subbox">Account Divisions</div>
+                <div class="org-subbox">Budget Division</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Custom styles for the organogram are now in css/style.css -->
+<!-- SVG connectors are used for professional lines -->
+<svg class="org-svg-connectors d-none" width="100%" height="260">
+    <!-- Minister to Perm Sec -->
+    <line x1="50%" y1="40" x2="50%" y2="90" stroke="#444" stroke-width="4" />
+    <!-- Perm Sec to Units -->
+    <line x1="50%" y1="90" x2="50%" y2="140" stroke="#444" stroke-width="4" />
+    <!-- Perm Sec to Departments horizontal -->
+    <line x1="10%" y1="140" x2="90%" y2="140" stroke="#444" stroke-width="4" />
+    <!-- Units to right -->
+    <line x1="50%" y1="140" x2="70%" y2="180" stroke="#444" stroke-width="4" />
+    <!-- Units to left -->
+    <line x1="50%" y1="140" x2="30%" y2="180" stroke="#444" stroke-width="4" />
+    <!-- Add more lines as needed for sub-divisions -->
+</svg>
+<!-- End SVG connectors -->
+<!-- Custom styles for the organogram are now in css/style.css -->
+    .organogram-structure .org-box {
+        border: 2px solid #444;
+        border-radius: 12px;
+        padding: 10px 14px;
+        margin: 0 auto 10px auto;
+        background: #fff;
+        min-width: 200px;
+        display: inline-block;
+    }
+    .organogram-structure .org-units-box {
+        min-width: 260px;
+        border-style: dashed;
+    }
+    .organogram-structure .org-subbox {
+        border: 1px solid #bbb;
+        border-radius: 8px;
+        margin: 6px 0 0 0;
+        padding: 4px 8px;
+        font-size: 0.95em;
+        background: #f9f9f9;
+    }
+    @media (max-width: 991px) {
+        .organogram-structure .org-level.org-departments .col-md-2 {
+            min-width: 90vw;
+        }
+    }
+.organogram-structure {
+    position: relative;
+    padding-bottom: 40px;
+}
+/* Minister to Perm Sec vertical line */
+.org-line-minister-permsec {
+    position: absolute;
+    left: 50%;
+    top: 38px;
+    width: 4px;
+    height: 40px;
+    background: #444;
+    margin-left: -2px;
+    z-index: 1;
+}
+/* Perm Sec to Units horizontal line */
+.org-line-permsec-units {
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    width: 320px;
+    height: 4px;
+    background: #444;
+    margin-left: -160px;
+    z-index: 1;
+}
+/* Perm Sec to Departments vertical line */
+.org-line-permsec-departments {
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    width: 4px;
+    height: 60px;
+    background: #444;
+    margin-left: -2px;
+    z-index: 1;
+}
+/* Units connector line */
+.org-units-box::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -27px;
+    width: 4px;
+    height: 27px;
+    background: #444;
+    margin-left: -2px;
+    z-index: 2;
+}
+/* Departments horizontal line */
+.org-departments::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: -18px;
+    height: 4px;
+    background: #444;
+    z-index: 1;
+}
+/* Department to sub-division vertical lines */
+.org-box > .org-subbox:first-child::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -18px;
+    width: 4px;
+    height: 18px;
+    background: #bbb;
+    margin-left: -2px;
+    z-index: 1;
+}
+.org-box {
+    position: relative;
+}
+.org-subbox {
+    position: relative;
+    margin-top: 10px;
+}
+</style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Organogram Section -->
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-widget">
+                        <h4>Federal Ministry of Women Affairs</h4>
+                        <p>Empowering women for national development</p>
+                        <div class="social-links mt-3">
+                            <a href="https://www.facebook.com/FMWAngr" target="_blank" rel="noopener noreferrer" class="me-2" title="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/FMWA_ng" target="_blank" rel="noopener noreferrer" class="me-2" title="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/FMWAngr" target="_blank" rel="noopener noreferrer" class="me-2" title="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="http://www.youtube.com/@fmwangr" target="_blank" rel="noopener noreferrer" class="me-2" title="Watch us on YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-widget">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="https://webmail.womenaffairs.gov.ng/" target="_blank" rel="noopener" title="Access Staff Email Services">Staff Email Services</a></li>
+                            <li><a href="#" title="Go to home page">Home</a></li>
+                            <li><a href="about.html" title="Learn about us">About Us</a></li>
+                            <li><a href="#" title="View our services">Services</a></li>
+                            <li><a href="#" title="Access resources">Resources</a></li>
+                            <li><a href="#">News & Events</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 ms-auto">
+                    <div class="footer-widget">
+                        <h4>Contact Us</h4>
+                        <address>
+                            <p><i class="fas fa-map-marker-alt me-2"></i> Plot 1070, Central Business District, Cadastral Zone AO, Shehu Shagari Way, by Ralph Shodeinde Street, opposite the Court of Appeal, in Abuja, FCT</p>
+                            <p class="mb-2"><i class="fas fa-envelope me-2"></i> info@womenaffairs.gov.ng</p>
+                            <p><i class="fas fa-clock me-2"></i> Mon - Fri: 8:00 AM - 4:00 PM</p>
+                        </address>
+                        <div class="mt-4">
+                            <h5>Newsletter</h5>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                                <button class="btn btn-warning" type="button">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        &copy; 2025 Federal Ministry of Women Affairs. All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/highlight-section.js"></script>
+</body>
+</html>
