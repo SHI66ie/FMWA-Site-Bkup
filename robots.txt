@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://fmwa.gov.ng/sitemap.xml
+Sitemap: https://womenaffairs.gov.ng/sitemap.xml
 
 # Disallow crawling of admin and system files
 Disallow: /admin/
