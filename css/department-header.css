@@ -42,8 +42,9 @@
     background: transparent;
     padding: 0;
     margin: 0 0 0.25rem 0;
-    font-size: 1.75rem;
+    font-size: 1.05rem; /* 30% smaller than h1 (1.5rem) */
     line-height: 1.2;
+    opacity: 0.85; /* Slightly transparent for better hierarchy */
 }
 
 .department-header .breadcrumb-item {
