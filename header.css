@@ -1,4 +1,50 @@
-/* Ensure mobile menu has proper contrast */
+/* Navigation Bar Styling */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.fmwa-navbar-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 0.75rem;
+    color: #fff;
+}
+
+.logo-divider {
+    width: 1px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 1rem;
+}
+
+.fmwa-logo {
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation Links */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 0.5rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+/* Mobile Menu Styling */
 @media (max-width: 991.98px) {
     .navbar-dark .navbar-toggler {
         border-color: rgba(255, 255, 255, 0.1);
@@ -33,6 +79,21 @@
     .dropdown-item:focus {
         color: #000;
         background-color: rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Adjust title for mobile */
+    .fmwa-navbar-title {
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+    }
+    
+    .fmwa-logo {
+        height: 40px;
+    }
+    
+    .logo-divider {
+        height: 30px;
+        margin: 0 0.5rem;
     }
     
     /* Fix for nested dropdowns */
