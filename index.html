@@ -28,6 +28,36 @@
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     
+    <!-- Mobile Menu Fix -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Close other dropdowns when one is opened
+        document.querySelectorAll('.dropdown-toggle').forEach(function(element) {
+            element.addEventListener('click', function(e) {
+                if (window.innerWidth < 992) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Close other open dropdowns
+                    const parentNav = this.closest('.navbar-collapse');
+                    if (parentNav) {
+                        parentNav.querySelectorAll('.show').forEach(function(openDropdown) {
+                            if (openDropdown !== this.nextElementSibling) {
+                                const bsCollapse = new bootstrap.Collapse(openDropdown, {toggle: false});
+                                bsCollapse.hide();
+                            }
+                        }.bind(this));
+                    }
+                    
+                    // Toggle current dropdown
+                    const dropdown = bootstrap.Dropdown.getInstance(this) || new bootstrap.Dropdown(this);
+                    dropdown.toggle();
+                }
+            });
+        });
+    });
+    </script>
+    
     <!-- Welcome Section Styles -->
     <style>
         /* Mobile-first responsive styles */
