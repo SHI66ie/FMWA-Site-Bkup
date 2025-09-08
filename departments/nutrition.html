@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the Nutrition department at the Federal Ministry of Women Affairs">
+    <title>Nutrition | Federal Ministry of Women Affairs</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css?v=1.0.1">
+    <link rel="stylesheet" href="../css/header.css?v=1.0.1">
+    <link rel="stylesheet" href="../css/welcome.css?v=1.0.1">
+    <link rel="stylesheet" href="../css/news.css?v=1.0.1">
+    <link rel="stylesheet" href="../css/carousel-styles.css">
+    <link rel="stylesheet" href="../css/general.css?v=1.0.1">
+    <link rel="stylesheet" href="../css/footer.css?v=1.0.1">
+    <link rel="stylesheet" href="../css/downloads.css?v=1.0.1">
+    <link rel="stylesheet" href="../css/leadership.css?v=1.0.1">
+    <link rel="stylesheet" href="../css/department.css?v=1.0.1">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        /* Text alignment in the main content area */
+        .department-content p,
+        .department-content li,
+        .department-content .card-text {
+            text-align: left;
+            -ms-hyphens: auto;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+        
+        /* Ensure list items maintain proper spacing */
+        .list-group-item {
+            padding: 0.75rem 1.25rem;
+        }
+    </style>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <!-- Initialize Bootstrap components -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize all dropdowns
+        var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+            return new bootstrap.Dropdown(dropdownToggleEl, {
+                autoClose: 'outside',
+                popperConfig: function(defaultBsPopperConfig) {
+                    return {
+                        ...defaultBsPopperConfig,
+                        strategy: 'fixed'
+                    };
+                }
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-nav px-0">
+        <div class="container-fluid gx-0">
+            <a class="navbar-brand d-flex align-items-center me-0" href="../index.html">
+                <img src="../images/2025_07_14_13_42_IMG_2808.PNG" alt="Federal Ministry of Women Affairs Logo" class="fmwa-logo-stretch">
+                <span class="logo-divider"></span>
+                <span class="fmwa-navbar-title">FEDERAL MINISTRY OF WOMEN AFFAIRS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation menu" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html" title="Go to home page">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" title="Learn about the ministry" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="../about.html#mandate-section" title="View our mandate">Mandate</a></li>
+                            <li><a class="dropdown-item" href="../about.html#mission-section" title="Read our mission">Mission</a></li>
+                            <li><a class="dropdown-item" href="../about.html#vision-section" title="Learn about our vision">Vision</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../organogram.html" title="View our organizational structure">Organogram</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="departmentsDropdown" role="button" data-bs-toggle="dropdown" title="Explore our departments and divisions" aria-expanded="false">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+                            <li><a class="dropdown-item" href="womendevelopment.html" title="Women Development">Women Development</a></li>
+                            <li><a class="dropdown-item" href="child-development.html" title="Child Development">Child Development</a></li>
+                            <li><a class="dropdown-item" href="community-development-social-intervention.html" title="Community Development & Social Intervention">Community Development & Social Intervention</a></li>
+                            <li><a class="dropdown-item" href="gender-affairs.html" title="Gender Affairs">Gender Affairs</a></li>
+                            <li><a class="dropdown-item active" href="nutrition.html" title="Nutrition">Nutrition</a></li>
+                            <li><a class="dropdown-item" href="general-services.html" title="General Services">General Services</a></li>
+                            <li><a class="dropdown-item" href="planning-research-statistics.html" title="Planning, Research & Statistics">Planning, Research & Statistics</a></li>
+                            <li><a class="dropdown-item" href="finance-accounting.html" title="Finance & Accounting">Finance & Accounting</a></li>
+                            <li><a class="dropdown-item" href="procurement.html" title="Procurement">Procurement</a></li>
+                            <li><a class="dropdown-item" href="reform-coordination-service-improvement.html" title="Reform Coordination & Service Improvement">Reform Coordination & Service Improvement</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" title="Divisions">Divisions</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" title="Legal Services">Legal Services</a></li>
+                                    <li><a class="dropdown-item" href="#" title="Press Unit">Press Unit</a></li>
+                                    <li><a class="dropdown-item" href="#" title="Internal Audit">Internal Audit</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item hidden-nav-item"><a class="nav-link" href="#" title="View our programs">Programs</a></li>
+                    <li class="nav-item hidden-nav-item"><a class="nav-link" href="#" title="Read our latest news">News</a></li>
+                    <li class="nav-item hidden-nav-item"><a class="nav-link" href="#" title="Contact us">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Department Header -->
+    <header class="page-header bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <h1>Nutrition</h1>
+                    <p class="lead">Promoting optimal nutrition for women, children, and families across Nigeria</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="container department-content">
+        <div class="row">
+            <!-- Main Content Area -->
+            <div class="col-12">
+                <h2 class="mb-4">Overview</h2>
+                <p class="lead">The Nutrition Department is dedicated to improving the nutritional status of women and children through evidence-based interventions, education, and policy development.</p>
+                
+                <div class="mt-5">
+                    <h3 class="mb-3">Key Functions</h3>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item">Development of sector specific guidelines on Gender Mainstreaming (Development)</li>
+                        <li class="list-group-item">Coordinating of international agencies on gender equality and empowerment i.e., multilateral Government and non-Governmental Organization's</li>
+                        <li class="list-group-item">Coordination of Government-to-Government Bilateral Cooperation on Gender issues/concerns</li>
+                        <li class="list-group-item">Coordinate the preparation of periodic country progress reports concerning gender on major treaties, convention and charter signed and ratified by Nigeria</li>
+                        <li class="list-group-item">Ensure sustenance of the national gender information on management system and data management</li>
+                        <li class="list-group-item">Participation and engagement in statutory global continental and regional (United Nations (UN) and African Union) meetings</li>
+                        <li class="list-group-item">Uphold and implement global conventions, protocols and resolutions concerning gender</li>
+                        <li class="list-group-item">Coordinate advocacy and resource mobilization in states to advance gender equality and empowerment concerns that hinges on gender including domestication of appropriate legislation</li>
+                        <li class="list-group-item">Monitoring and evaluation of international, regional and national framework for the advancement of women and girls</li>
+                        <li class="list-group-item">Develop and implement strategic activities and palliatives intervention for men and women in the emergence of crises and natural pandemic</li>
+                        <li class="list-group-item">Participate and celebrate all gender related global international days</li>
+                    </ul>
+                </div>
+                
+                <div class="mt-5">
+                    <h3 class="mb-3">Programs and Initiatives</h3>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Maternal Nutrition</h5>
+                                    <p class="card-text">Programs to ensure proper nutrition for pregnant and lactating women.</p>
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Child Nutrition</h5>
+                                    <p class="card-text">Initiatives to prevent and treat malnutrition in children under five.</p>
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-5">
+                    <h3 class="mb-3">Recent Updates</h3>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">National Nutrition Week 2023</h5>
+                                <small class="text-muted">September 4-10, 2023</small>
+                            </div>
+                            <p class="mb-1">Annual event to raise awareness about the importance of good nutrition.</p>
+                            <small class="text-muted">Read more →</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Micronutrient Supplementation Campaign</h5>
+                                <small class="text-muted">July 15, 2023</small>
+                            </div>
+                            <p class="mb-1">Distribution of vitamin A supplements to children under five across Nigeria.</p>
+                            <small class="text-muted">Read more →</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-widget">
+                        <h4>Federal Ministry of Women Affairs</h4>
+                        <p>Empowering women for national development</p>
+                        <div class="social-links mt-3">
+                            <a href="https://www.facebook.com/FMWAngr" target="_blank" rel="noopener noreferrer" class="me-2" title="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/FMWA_ng" target="_blank" rel="noopener noreferrer" class="me-2" title="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/FMWAngr" target="_blank" rel="noopener noreferrer" class="me-2" title="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="http://www.youtube.com/@fmwangr" target="_blank" rel="noopener noreferrer" class="me-2" title="Watch us on YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-widget">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="https://webmail.womenaffairs.gov.ng/" target="_blank" rel="noopener" title="Access Staff Email Services">Staff Email Services</a></li>
+                            <li><a href="../index.html" title="Go to home page">Home</a></li>
+                            <li><a href="../about.html" title="Learn about us">About Us</a></li>
+                            <li><a href="#" title="View our services">Services</a></li>
+                            <li><a href="#" title="Access resources">Resources</a></li>
+                            <li><a href="#">News & Events</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 ms-auto">
+                    <div class="footer-widget">
+                        <h4>Contact Us</h4>
+                        <address>
+                            <p><i class="fas fa-map-marker-alt me-2"></i> Plot 1070, Central Business District, Cadastral Zone AO, Shehu Shagari Way, by Ralph Shodeinde Street, opposite the Court of Appeal, in Abuja, FCT</p>
+                            <p class="mb-2"><i class="fas fa-envelope me-2"></i> info@womenaffairs.gov.ng</p>
+                            <p><i class="fas fa-clock me-2"></i> Mon - Fri: 8:00 AM - 4:00 PM</p>
+                        </address>
+                        <div class="mt-4">
+                            <h5>Newsletter</h5>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                                <button class="btn btn-warning" type="button">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        &copy; 2025 Federal Ministry of Women Affairs. All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary back-to-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/highlight-section.js"></script>
+    <script src="../js/cookie-consent.js"></script>
+    <script>
+    // Carousel JavaScript removed
+    </script>
+    <script src="../js/division-submenu.js"></script>
+    <script src="../js/shrink-dropdown-options.js"></script>
+    <script src="../js/dropdown-tooltip.js"></script>
+    <script src="../js/remove-latest-news.js"></script>
+    
+    <script>
+        // Back to top button
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Set active state for current page in navigation
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === 'nutrition.html') {
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                }
+            });
+            
+            // Set active state for departments dropdown
+            const departmentsLink = document.querySelector('#departmentsDropdown');
+            if (departmentsLink) {
+                departmentsLink.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

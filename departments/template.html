@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the [DEPARTMENT NAME] department at the Federal Ministry of Women Affairs">
+    <title>[DEPARTMENT NAME] | Federal Ministry of Women Affairs</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/department.css" rel="stylesheet">
+    
+    <style>
+        .department-header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 60px 0 40px;
+            margin-bottom: 40px;
+        }
+        
+        .department-content {
+            margin-bottom: 60px;
+        }
+        
+        .department-sidebar {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .department-sidebar h3 {
+            color: #0d6efd;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .department-sidebar .nav-link {
+            color: #333;
+            padding: 8px 0;
+            border-left: 3px solid transparent;
+        }
+        
+        .department-sidebar .nav-link:hover,
+        .department-sidebar .nav-link.active {
+            color: #0d6efd;
+            background-color: #e9ecef;
+            border-left-color: #0d6efd;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navigation (will be loaded via JavaScript) -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Department Header -->
+    <header class="department-header">
+        <div class="container">
+            
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-nav px-0">
+        <div class="container-fluid gx-0">
+            <a class="navbar-brand d-flex align-items-center me-0" href="index.html">
+                <img src="images/2025_07_14_13_42_IMG_2808.PNG" alt="Federal Ministry of Women Affairs Logo" class="fmwa-logo-stretch">
+                <span class="logo-divider"></span>
+                <span class="fmwa-navbar-title">FEDERAL MINISTRY OF WOMEN AFFAIRS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation menu" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" title="Go to home page">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" title="Learn about the ministry" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="about.html#mandate-section" title="View our mandate">Mandate</a></li>
+                            <li><a class="dropdown-item" href="about.html#mission-section" title="Read our mission">Mission</a></li>
+                            <li><a class="dropdown-item" href="about.html#vision-section" title="Learn about our vision">Vision</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="organogram.html" title="View our organizational structure">Organogram</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="departmentsDropdown" role="button" data-bs-toggle="dropdown" title="Explore our departments and divisions" aria-expanded="false">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+                            <li><a class="dropdown-item" href="womendevelopment.html" title="Women Development">Women Development</a></li>
+                            <li><a class="dropdown-item" href="departments/child-development.html" title="Child Development">Child Development</a></li>
+                            <li><a class="dropdown-item" href="departments/community-development-social-intervention.html" title="Community Development & Social Intervention">Community Development & Social Intervention</a></li>
+                            <li><a class="dropdown-item" href="departments/gender-affairs.html" title="Gender Affairs">Gender Affairs</a></li>
+                            <li><a class="dropdown-item" href="departments/nutrition.html" title="Nutrition">Nutrition</a></li>
+                            <li><a class="dropdown-item" href="departments/general-services.html" title="General Services">General Services</a></li>
+                            <li><a class="dropdown-item" href="departments/planning-research-statistics.html" title="Planning, Research & Statistics">Planning, Research & Statistics</a></li>
+                            <li><a class="dropdown-item" href="departments/finance-accounting.html" title="Finance & Accounting">Finance & Accounting</a></li>
+                            <li><a class="dropdown-item" href="departments/procurement.html" title="Procurement">Procurement</a></li>
+                            <li><a class="dropdown-item" href="departments/reform-coordination-service-improvement.html" title="Reform Coordination & Service Improvement">Reform Coordination & Service Improvement</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" title="Divisions">Divisions</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" title="Legal Services">Legal Services</a></li>
+                                    <li><a class="dropdown-item" href="#" title="Press Unit">Press Unit</a></li>
+                                    <li><a class="dropdown-item" href="#" title="Internal Audit">Internal Audit</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item hidden-nav-item"><a class="nav-link" href="#" title="View our programs">Programs</a></li>
+                    <li class="nav-item hidden-nav-item"><a class="nav-link" href="#" title="Read our latest news">News</a></li>
+                    <li class="nav-item hidden-nav-item"><a class="nav-link" href="#" title="Contact us">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+            <h1 class="display-4 fw-bold">[DEPARTMENT NAME]</h1>
+            <p class="lead">[BRIEF DEPARTMENT TAGLINE]</p>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="container department-content">
+        <div class="row">
+            <!-- Main Content Area -->
+            <div class="col-lg-8">
+                <h2 class="mb-4">Overview</h2>
+                <p class="lead">[BRIEF OVERVIEW OF THE DEPARTMENT'S ROLE AND RESPONSIBILITIES]</p>
+                
+                <div class="mt-5">
+                    <h3 class="mb-3">Key Functions</h3>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item">[KEY FUNCTION 1]</li>
+                        <li class="list-group-item">[KEY FUNCTION 2]</li>
+                        <li class="list-group-item">[KEY FUNCTION 3]</li>
+                        <li class="list-group-item">[KEY FUNCTION 4]</li>
+                    </ul>
+                </div>
+                
+                <div class="mt-5">
+                    <h3 class="mb-3">Programs and Initiatives</h3>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">[PROGRAM 1]</h5>
+                                    <p class="card-text">[BRIEF DESCRIPTION]</p>
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">[PROGRAM 2]</h5>
+                                    <p class="card-text">[BRIEF DESCRIPTION]</p>
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-5">
+                    <h3 class="mb-3">Recent Updates</h3>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">[NEWS TITLE]</h5>
+                                <small class="text-muted">[DATE]</small>
+                            </div>
+                            <p class="mb-1">[BRIEF DESCRIPTION]</p>
+                            <small class="text-muted">Read more →</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">[NEWS TITLE]</h5>
+                                <small class="text-muted">[DATE]</small>
+                            </div>
+                            <p class="mb-1">[BRIEF DESCRIPTION]</p>
+                            <small class="text-muted">Read more →</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="department-sidebar">
+                    <h3>Quick Links</h3>
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#overview">Overview</a>
+                        <a class="nav-link" href="#functions">Key Functions</a>
+                        <a class="nav-link" href="#programs">Programs</a>
+                        <a class="nav-link" href="#updates">Recent Updates</a>
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </nav>
+                    
+                    <div class="mt-4">
+                        <h4>Contact Information</h4>
+                        <address class="mt-3">
+                            <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Federal Ministry of Women Affairs<br>
+                            <span class="ms-4">[BUILDING NAME]</span><br>
+                            <span class="ms-4">[ADDRESS LINE 1]</span><br>
+                            <span class="ms-4">[ADDRESS LINE 2]</span></p>
+                            
+                            <p class="mb-2"><i class="fas fa-phone me-2"></i> [PHONE NUMBER]</p>
+                            <p class="mb-2"><i class="fas fa-envelope me-2"></i> [EMAIL ADDRESS]</p>
+                        </address>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4>Office Hours</h4>
+                        <p class="mb-1">Monday - Friday: 8:00 AM - 4:00 PM</p>
+                        <p>Weekends & Public Holidays: Closed</p>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Need Help?</h5>
+                        <p class="card-text">Contact our support team for assistance</p>
+                        <a href="../contact.html" class="btn btn-primary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer (will be loaded via JavaScript) -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary back-to-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Load header and footer
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header
+            fetch('../includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    // Update active link
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        if (link.textContent.trim() === 'Departments') {
+                            link.classList.add('active');
+                            link.setAttribute('aria-current', 'page');
+                        }
+                    });
+                });
+            
+            // Load footer
+            fetch('../includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+                
+            // Back to top button
+            const backToTopButton = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
