@@ -122,6 +122,14 @@ def update_department_pages(directory):
                 # Add the title bar with slogan
                 soup = add_title_bar(soup, dept_info)
                 
+                # Add dropdown-styles.css if not already present
+                head = soup.find('head')
+                if head:
+                    # Check if the stylesheet is already linked
+                    if not head.find('link', {'href': '../css/dropdown-styles.css'}):
+                        link_tag = soup.new_tag('link', rel='stylesheet', href='../css/dropdown-styles.css')
+                        head.append(link_tag)
+                
                 # Pretty-print the HTML with proper indentation
                 pretty_html = soup.prettify()
                 
