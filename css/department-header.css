@@ -66,9 +66,11 @@
     color: #fff; /* White text for better contrast on green background */
     font-size: 1.4rem;
     font-weight: 600;
-    margin: 0;
+    margin: 0 auto; /* Center the title */
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-align: center; /* Center the text */
+    width: 100%; /* Take full width to center properly */
 }
 
 /* Breadcrumb Navigation - Hidden */
