@@ -54,36 +54,37 @@
 /* Department Title Bar */
 .department-title-bar {
     background-color: #014903; /* Site green color */
-    padding: 0.8rem 0;
+    padding: 0.5rem 0; /* Reduced padding to make it slimmer */
     margin: 0 -15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     z-index: 10;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .department-title {
     color: #fff; /* White text for better contrast on green background */
-    font-size: 1.4rem;
+    font-size: 1.2rem; /* Slightly smaller font size */
     font-weight: 600;
-    margin: 0 0 0.25rem 0; /* Add small bottom margin for the slogan */
+    margin: 0 0 0.15rem 0; /* Reduced margin between title and slogan */
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    text-align: center; /* Center the text */
-    width: 100%; /* Take full width to center properly */
-    line-height: 1.2;
+    letter-spacing: 0.4px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.1;
 }
 
 .department-slogan {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85rem; /* Slightly smaller font size */
     font-weight: 400;
     text-align: center;
     margin: 0;
     font-style: italic;
-    line-height: 1.4;
+    line-height: 1.2; /* Tighter line height */
     text-transform: none;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
+    padding: 0 10px; /* Add slight horizontal padding */
 }
 
 /* Breadcrumb Navigation - Hidden */
