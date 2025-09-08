@@ -5,9 +5,10 @@
     }
     
     .navbar-dark .navbar-nav .nav-link {
-        color: #333;
+        color: #28a745; /* Green color for main menu items */
         padding: 10px 15px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        font-weight: 500;
     }
     
     .navbar-dark .navbar-nav .nav-link:hover,
@@ -17,14 +18,15 @@
     }
     
     .dropdown-menu {
-        background-color: #f8f9fa;
+        background-color: #28a745; /* Green background for dropdown */
         border: none;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
     
     .dropdown-item {
-        color: #333;
+        color: #fff; /* White text for dropdown items */
         padding: 8px 20px;
+        background-color: #28a745; /* Green background for dropdown items */
     }
     
     .dropdown-item:hover,
