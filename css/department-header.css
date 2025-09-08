@@ -1,0 +1,102 @@
+/* Department Header Styles */
+.department-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 0;
+}
+
+.department-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PC9zdmc+') repeat;
+    opacity: 0.1;
+}
+
+.department-icon {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    color: var(--bs-primary);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.department-icon:hover {
+    transform: translateY(-5px);
+}
+
+.department-icon i {
+    font-size: 3rem;
+}
+
+.department-header .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
+.department-header .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.department-header .breadcrumb-item a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.department-header .breadcrumb-item a:hover {
+    opacity: 0.8;
+}
+
+.department-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.department-header .lead {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .department-header {
+        text-align: center;
+        padding: 2rem 0;
+    }
+    
+    .department-icon {
+        margin: 0 auto 1.5rem;
+    }
+    
+    .department-header h1 {
+        font-size: 2rem;
+    }
+    
+    .department-header .lead {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .department-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .department-header .lead {
+        font-size: 1rem;
+    }
+}
