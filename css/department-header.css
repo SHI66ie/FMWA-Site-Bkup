@@ -38,42 +38,6 @@
     font-size: 3rem;
 }
 
-.department-header .breadcrumb {
-    background: transparent;
-    padding: 0;
-    margin: 0 0 0.25rem 0;
-    font-size: 1.05rem; /* 30% smaller than h1 (1.5rem) */
-    line-height: 1.2;
-    opacity: 0.85; /* Slightly transparent for better hierarchy */
-}
-
-.department-header .breadcrumb-item {
-    display: inline;
-    align-items: center;
-}
-
-.department-header .breadcrumb-item + .breadcrumb-item::before {
-    color: #6c757d;
-    padding: 0 0.35rem;
-    content: "/";
-}
-
-.department-header .breadcrumb-item a {
-    color: #014903;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.15s ease;
-}
-
-.department-header .breadcrumb-item a:hover {
-    color: #013302;
-    text-decoration: underline;
-}
-
-.department-header .breadcrumb-item.active {
-    color: #495057;
-}
-
 .department-header h1 {
     font-size: 2.5rem;
     font-weight: 700;
