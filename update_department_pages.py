@@ -52,26 +52,51 @@ def update_department_page(file_path, header, footer):
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(content)
 
+def process_html_file(file_path, header, footer):
+    """Process a single HTML file to update header and footer"""
+    try:
+        # Skip index.html and template files
+        if os.path.basename(file_path) in ['index.html', 'template.html']:
+            return False
+            
+        print(f"Updating {os.path.basename(file_path)}...")
+        update_department_page(file_path, header, footer)
+        print(f"Successfully updated {os.path.basename(file_path)}")
+        return True
+    except Exception as e:
+        print(f"Error updating {os.path.basename(file_path)}: {str(e)}")
+        return False
+
 def main():
     # Get the standard header and footer from index.html
     header, footer = get_header_footer()
     if not header or not footer:
-        print("Warning: Could not find header or footer in index.html")
+        print("Error: Could not find header or footer in index.html")
+        return
     
-    # Update all department pages
-    departments_dir = os.path.join(os.path.dirname(__file__), 'departments')
+    # Get the project root directory
+    project_root = os.path.dirname(os.path.abspath(__file__))
+    updated_count = 0
     
-    for filename in os.listdir(departments_dir):
-        if filename.endswith('.html') and filename != 'template.html':
-            file_path = os.path.join(departments_dir, filename)
-            print(f"Updating {filename}...")
-            try:
-                update_department_page(file_path, header, footer)
-                print(f"Successfully updated {filename}")
-            except Exception as e:
-                print(f"Error updating {filename}: {str(e)}")
+    # Process all HTML files in the project
+    for root, _, files in os.walk(project_root):
+        # Skip certain directories if needed
+        if 'node_modules' in root or '.git' in root:
+            continue
+            
+        for filename in files:
+            if filename.endswith('.html'):
+                file_path = os.path.join(root, filename)
+                relative_path = os.path.relpath(file_path, project_root)
+                
+                # Skip index.html as it's our source
+                if filename == 'index.html':
+                    continue
+                    
+                if process_html_file(file_path, header, footer):
+                    updated_count += 1
     
-    print("\nAll department pages have been processed!")
+    print(f"\nProcessed {updated_count} HTML files with the standard header and footer.")
 
 if __name__ == "__main__":
     main()
