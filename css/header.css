@@ -1,42 +1,1123 @@
-/* Ensure mobile menu has proper contrast */
+/* Header and Navigation Styles */
+
+/* Maintenance notice in welcome section */
+.welcome-section .maintenance-notice {
+    width: 100%;
+    background-color: #ffc107;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Reset all margins and padding for the navbar */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Make navbar fixed at the very top */
+.main-nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1060 !important;
+    width: 100% !important;
+    background-color: #014903 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 70px !important;
+    display: flex !important;
+    align-items: center !important;
+    border: none !important;
+}
+
+/* Add padding to body to account for fixed navbar and notice */
+body {
+    padding-top: 108px !important; /* Height of navbar (70px) + notice (38px) */
+    margin: 0 !important;
+    position: relative !important;
+}
+
+/* Ensure no other elements interfere with the header */
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure content starts below the fixed navbar */
+body > *:not(.main-nav) {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure welcome section appears below navbar */
+.welcome-section {
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Welcome section with notice */
+.welcome-section {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/* Page Header Styles */
+.page-header {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 auto 0.75rem;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.page-header .lead {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    max-width: 700px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Make header more compact on smaller screens */
+@media (max-width: 767.98px) {
+    .page-header {
+        padding: 1rem 0;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .page-header .lead {
+        font-size: 0.9rem;
+    }
+}
+
+.fmwa-logo-stretch {
+    margin: 0 15px 0 0;
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.fmwa-navbar-title {
+    display: inline-block;
+    white-space: normal;
+    font-size: 1rem;
+    color: #014903 !important; /* Set title color to green */
+    font-weight: 700;
+    margin-left: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: none;
+    line-height: 1.2;
+}
+
+/* Adjust logo and title for mobile */
+@media (max-width: 767.98px) {
+    .navbar-brand {
+        max-width: 80%;
+    }
+    
+    .fmwa-logo-stretch {
+        height: 40px;
+        margin-left: 5px;
+    }
+    
+    .fmwa-navbar-title {
+        font-size: 0.85rem;
+        letter-spacing: 0.3px;
+        white-space: normal;
+        word-break: break-word;
+    }
+    
+    .logo-divider {
+        height: 25px;
+        margin: 0 5px;
+    }
+}
+
+.logo-divider {
+    display: inline-block;
+    height: 30px;
+    width: 1px;
+    background-color: rgba(255,255,255,0.3);
+    margin: 0 10px;
+}
+
+.navbar-tagline {
+    color: white;
+    font-size: 0.9rem;
+    margin: 0 15px;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.top-bar {
+    background-color: #014903;
+    color: white;
+    padding: 6px 0;
+    font-size: 12px;
+}
+
+.main-nav {
+    background-color: #014903;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav .navbar-brand img {
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+.main-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 12px 8px !important;
+    text-transform: uppercase;
+    font-size: 11px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.main-nav .nav-link:hover {
+    color: #f9ca24 !important;
+}
+
+/* Remove bottom border from active menu item */
+.main-nav .nav-item .nav-link.active,
+.main-nav .nav-item .nav-link:focus,
+.main-nav .nav-item .nav-link:active {
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    max-width: 280px;
+    min-width: 200px;
+    font-size: 0.9em;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    left: auto !important;
+    right: 0;
+    /* Ensure dropdown doesn't close when clicking inside */
+    pointer-events: auto;
+}
+
+.dropdown-item {
+    white-space: normal;
+    word-wrap: break-word;
+    padding: 0.35rem 1.5rem;
+    line-height: 1.4;
+}
+
+/* Dropdown submenu styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -0.5rem;
+    margin-left: 0.1rem;
+    border-radius: 0 6px 6px 6px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.dropdown-submenu .dropdown-toggle::after {
+    float: right;
+    margin-top: 0.3em;
+    margin-left: 0.5em;
+    vertical-align: middle;
+}
+
+/* Completely disable hover behavior for dropdowns */
+.dropdown-menu {
+    pointer-events: none;
+    opacity: 0;
+    display: block !important;
+    visibility: hidden;
+    transition: none !important;
+}
+
+.dropdown-menu.show {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Prevent any hover effects on dropdown toggles */
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Disable hover effects on dropdown items */
+.dropdown-item:focus, 
+.dropdown-item:hover {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+/* Make sure dropdowns work with click only */
+.dropdown-toggle:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Ensure dropdowns don't close when clicking inside */
+.dropdown-menu {
+    pointer-events: auto;
+}
+
+/* Dropdown positioning for main nav */
+.dropdown:not(.dropstart) .dropdown-menu {
+    left: auto !important;
+    right: 0;
+    margin-right: 30px !important; /* Increased right margin */
+    margin-top: 10px !important; /* Add top margin */
+}
+
+/* Dropdown submenu positioning */
+.dropdown-submenu .dropdown-menu {
+    top: -10px !important;
+    left: 100% !important;
+    margin-left: 0.5rem !important;
+    margin-top: 0 !important;
+    border-radius: 0 6px 6px 6px;
+}
+
+/* Adjust for RTL if needed */
+[dir="rtl"] .dropdown-submenu .dropdown-menu {
+    left: auto !important;
+    right: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0.5rem !important;
+}
+
+/* Mobile menu adjustments */
 @media (max-width: 991.98px) {
-    .navbar-dark .navbar-toggler {
-        border-color: rgba(255, 255, 255, 0.1);
+    .navbar-collapse {
+        background-color: #014903;
+        padding: 0.5rem;
+        margin-top: 10px;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     
-    .navbar-dark .navbar-nav .nav-link {
-        color: #333;
-        padding: 10px 15px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    .nav-item {
+        margin: 2px 0;
     }
     
-    .navbar-dark .navbar-nav .nav-link:hover,
-    .navbar-dark .navbar-nav .nav-link:focus {
-        color: #000;
-        background-color: rgba(0, 0, 0, 0.05);
+    .nav-link {
+        padding: 0.5rem 1rem !important;
+        border-radius: 4px;
+    }
+    
+    .nav-link:hover, 
+    .nav-link:focus {
+        background-color: rgba(255,255,255,0.1);
     }
     
     .dropdown-menu {
-        background-color: #f8f9fa;
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin: 0.25rem 0 0.25rem 1rem !important;
         border: none;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: none;
+        background-color: rgba(0,0,0,0.1);
     }
     
     .dropdown-item {
-        color: #333;
-        padding: 8px 20px;
+        padding: 0.5rem 1.5rem !important;
+        color: rgba(255,255,255,0.8) !important;
     }
     
-    .dropdown-item:hover,
+    .dropdown-item:hover, 
     .dropdown-item:focus {
-        color: #000;
-        background-color: rgba(0, 0, 0, 0.05);
+        background-color: transparent !important;
+        color: #fff !important;
     }
     
-    /* Fix for nested dropdowns */
     .dropdown-submenu .dropdown-menu {
-        padding-left: 15px;
+        position: static !important;
+        margin: 0 0 0 1rem !important;
+        border-left: 2px solid rgba(255,255,255,0.1);
+    }
+}
+
+/* Header positioning */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    width: 100%;
+}
+
+/* Ensure header stays on top of other content */
+.main-nav {
+    position: relative;
+    z-index: 1030;
+}
+
+/* Fix for dropdowns in fixed navbar */
+.dropdown-menu {
+    z-index: 1050 !important;
+}
+
+/* Ensure dropdowns are above other content */
+.dropdown-submenu .dropdown-menu {
+    z-index: 1051 !important;
+}
+
+/* Fix for mobile menu backdrop */
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+/* Ensure proper spacing for mobile */
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 0 !important;
+    }
+    
+    .main-nav {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 0.25rem;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+}
+
+/* Fix for dropdown positioning in navbar */
+.navbar .dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+/* Ensure proper spacing for dropdown items */
+.dropdown-item {
+    padding: 0.5rem 1.5rem;
+    white-space: normal;
+}
+
+/* Add subtle transition for smoother interactions */
+.nav-link,
+.dropdown-item {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Ensure proper contrast for dropdown headers */
+.dropdown-header {
+    color: #6c757d;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    margin-top: 0.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Add divider between dropdown items */
+.dropdown-divider {
+    margin: 0.25rem 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Active state for dropdown items */
+.dropdown-item.active, 
+.dropdown-item:active {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Disabled state for dropdown items */
+.dropdown-item:disabled, 
+.dropdown-item.disabled {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: transparent;
+    opacity: 0.65;
+}
+
+/* Ensure proper spacing for dropdown sections */
+.dropdown-menu > li > a {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+/* Add subtle hover effect for dropdown items */
+.dropdown-item:not(.active):not(:active):hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+/* Ensure proper spacing for dropdown headers */
+.dropdown-header:first-child {
+    margin-top: 0;
+}
+
+/* Fix for dropdown alignment in RTL */
+[dir="rtl"] .dropdown-menu {
+    text-align: right;
+}
+
+/* Ensure proper spacing for nested dropdowns */
+.dropdown-submenu > .dropdown-menu {
+    margin-top: -0.5rem !important;
+}
+
+/* Fix for dropdown toggle arrow in RTL */
+[dir="rtl"] .dropdown-toggle::after {
+    margin-left: 0;
+    margin-right: 0.255em;
+}
+
+/* Ensure proper z-index for dropdown backdrops */
+.dropdown-backdrop {
+    z-index: 1040;
+}
+
+/* Fix for dropdown in navbar-nav */
+.navbar-nav .dropdown-menu {
+    position: absolute;
+}
+
+/* Ensure proper spacing for dropdown in navbar */
+.navbar .dropdown-menu {
+    margin-top: 0.5rem;
+}
+
+/* Fix for dropdown in navbar on mobile */
+@media (max-width: 991.98px) {
+    .navbar-nav .dropdown-menu {
+        position: static;
+        float: none;
+    }
+}
+
+/* Ensure proper spacing for dropdown items in navbar */
+.navbar .dropdown-item {
+    padding: 0.5rem 1.5rem;
+}
+
+/* Fix for dropdown in navbar on hover */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+    
+    .navbar .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Ensure proper spacing for dropdown toggles */
+.navbar .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+/* Fix for dropdown in navbar on RTL */
+[dir="rtl"] .navbar .dropdown-toggle::after {
+    margin-left: 0;
+    margin-right: 0.255em;
+}
+
+/* Ensure proper spacing for dropdown dividers */
+.navbar .dropdown-divider {
+    margin: 0.5rem 0;
+}
+
+/* Fix for dropdown headers in navbar */
+.navbar .dropdown-header {
+    padding: 0.5rem 1.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Ensure proper spacing for dropdown items in navbar */
+.navbar .dropdown-item {
+    padding: 0.5rem 1.5rem;
+}
+
+/* Fix for active state in navbar dropdown */
+.navbar .dropdown-item.active, 
+.navbar .dropdown-item:active {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Ensure proper spacing for disabled items in navbar dropdown */
+.navbar .dropdown-item:disabled, 
+.navbar .dropdown-item.disabled {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: transparent;
+    opacity: 0.65;
+}
+
+/* Welcome Marquee Section */
+.welcome-marquee {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 15px 0;
+    margin: 70px 0 0; /* Increased top margin to push it below the header */
+    overflow: hidden;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.scrolling-wrapper {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 25s linear infinite;
+}
+
+.scrolling-text i {
+    color: #f9ca24;
+    margin: 0 10px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Pause animation on hover */
+.welcome-marquee:hover .scrolling-text {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .welcome-marquee {
+        font-size: 0.85rem;
+        padding: 8px 0;
+    }
+    
+    .scrolling-text i {
+        margin: 0 5px;
+    }
+}
+
+/* Welcome Section with Scrolling Text */
+.welcome-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 0;
+    position: relative;
+    overflow: hidden;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.welcome-section .scrolling-text {
+    white-space: nowrap;
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+    padding: 0 20px;
+}
+
+.welcome-section i {
+    color: #f9ca24;
+    margin: 0 15px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Page Header Styles */
+.page-header {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 auto 0.75rem;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.page-header .lead {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    max-width: 700px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Make header more compact on smaller screens */
+@media (max-width: 767.98px) {
+    .page-header {
+        padding: 1rem 0;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .page-header .lead {
+        font-size: 0.9rem;
+    }
+}
+
+.fmwa-logo-stretch {
+    margin: 0 15px 0 0;
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.fmwa-navbar-title {
+    display: inline-block;
+    white-space: normal;
+    font-size: 1rem;
+    color: #014903 !important; /* Set title color to green */
+    font-weight: 700;
+    margin-left: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: none;
+    line-height: 1.2;
+}
+
+/* Adjust logo and title for mobile */
+@media (max-width: 767.98px) {
+    .navbar-brand {
+        max-width: 80%;
+    }
+    
+    .fmwa-logo-stretch {
+        height: 40px;
+        margin-left: 5px;
+    }
+    
+    .fmwa-navbar-title {
+        font-size: 0.85rem;
+        letter-spacing: 0.3px;
+        white-space: normal;
+        word-break: break-word;
+    }
+    
+    .logo-divider {
+        height: 25px;
+        margin: 0 5px;
+    }
+}
+
+.logo-divider {
+    display: inline-block;
+    height: 30px;
+    width: 1px;
+    background-color: rgba(255,255,255,0.3);
+    margin: 0 10px;
+}
+
+.navbar-tagline {
+    color: white;
+    font-size: 0.9rem;
+    margin: 0 15px;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.top-bar {
+    background-color: #014903;
+    color: white;
+    padding: 6px 0;
+    font-size: 12px;
+}
+
+/* Main Navigation */
+.navbar {
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    background-color: #014903 !important; /* Changed to site green */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 70px; /* Fixed height to prevent layout shift */
+}
+
+.main-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 12px 8px !important;
+    text-transform: uppercase;
+    font-size: 11px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.main-nav .nav-link:hover {
+    color: #f9ca24 !important;
+}
+
+/* Remove bottom border from active menu item */
+.main-nav .nav-item .nav-link.active,
+.main-nav .nav-item .nav-link:focus,
+.main-nav .nav-item .nav-link:active {
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    max-width: 280px;
+    min-width: 220px;
+    font-size: 0.9em;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    left: auto !important;
+    right: 0;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    pointer-events: auto;
+    opacity: 0;
+    visibility: hidden;
+    display: block !important;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    position: absolute;
+    transform: translate3d(0, 0, 0);
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-item {
+    white-space: normal;
+    word-wrap: break-word;
+    padding: 0.35rem 1.5rem;
+    line-height: 1.4;
+}
+
+/* Dropdown submenu styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -0.5rem;
+    margin-left: 0.1rem;
+    border-radius: 0 6px 6px 6px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.dropdown-submenu .dropdown-toggle::after {
+    float: right;
+    margin-top: 0.3em;
+    margin-left: 0.5em;
+    vertical-align: middle;
+}
+
+/* Dropdown menu items */
+.dropdown-item {
+    white-space: normal;
+    word-wrap: break-word;
+    padding: 0.5rem 1.5rem;
+    line-height: 1.4;
+    color: #333;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #f8f9fa;
+    color: #0d47a1;
+    text-decoration: none;
+}
+
+/* Prevent any hover effects on dropdown toggles */
+.dropdown-toggle::after {
+    transition: none !important;
+}
+
+/* Disable hover on dropdown items */
+.dropdown-item, .dropdown-toggle {
+    pointer-events: auto;
+}
+
+/* Hide submenus by default */
+.dropdown-menu > .dropdown-submenu > .dropdown-menu {
+    display: none !important;
+    pointer-events: none;
+}
+
+/* Only show submenus when parent has show class */
+.dropdown-menu > .dropdown-submenu.show > .dropdown-menu {
+    display: block !important;
+    pointer-events: auto;
+}
+
+/* Adjust navbar items spacing */
+.navbar-nav {
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.main-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 12px 8px !important;
+    text-transform: uppercase;
+    font-size: 11px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.main-nav .nav-link:hover {
+    color: #f9ca24 !important;
+}
+
+/* Remove bottom border from active menu item */
+.main-nav .nav-item .nav-link.active,
+.main-nav .nav-item .nav-link:focus,
+.main-nav .nav-item .nav-link:active {
+    border-bottom: none !important;
+    box-shadow: none !important;
+    left: auto !important;
+    right: 0;
+    margin-right: 30px !important; /* Increased right margin */
+    margin-top: 10px !important; /* Add top margin */
+    min-width: 250px; /* Ensure minimum width */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Add shadow for depth */
+    border: 1px solid rgba(0,0,0,0.1); /* Add subtle border */
+}
+
+/* Adjust position for dropdown-submenu */
+.dropdown-submenu > .dropdown-menu {
+    top: -10px;
+    left: auto !important;
+    right: 100%;
+    margin-top: 0;
+    margin-right: 20px !important; /* Increased spacing */
+    border-radius: 6px !important;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2); /* Add shadow */
+    border: 1px solid rgba(0,0,0,0.1); /* Match main dropdown */
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 1199.98px) {
+    .navbar-nav {
+        flex-wrap: wrap;
+    }
+    
+    .nav-item {
+        margin: 2px 0;
+    }
+    
+    .dropdown-menu {
+        position: static !important;
+        margin: 0.25rem 0 0.25rem 1.5rem !important;
+        float: none;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .dropdown-submenu .dropdown-menu {
+        left: 0;
+        margin-left: 1.5rem !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #014903;
+        padding: 0.5rem;
+        margin-top: 10px;
+        border-radius: 4px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+    
+    .navbar-collapse.show {
+        max-height: 1000px; /* Adjust based on your content */
+    }
+    
+    .navbar-nav {
+        margin: 0 !important;
+    }
+    
+    .nav-item {
+        margin-bottom: 5px;
+    }
+    
+    .dropdown-menu {
+        background-color: rgba(1, 73, 3, 0.9);
+        border: none;
+        margin: 5px 0 5px 15px;
+        padding: 0;
+    }
+    
+    .dropdown-item {
+        color: white !important;
+        padding: 8px 15px !important;
+        font-size: 14px;
+    }
+    
+    .dropdown-item:hover, 
+    .dropdown-item:focus {
+        background-color: #013602;
+    }
+    
+    .dropdown-divider {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        margin: 5px 0;
+    }
+    
+    .dropdown-submenu .dropdown-menu {
+        position: static;
         margin-left: 15px;
-        border-left: 2px solid rgba(0, 0, 0, 0.1);
+        border: none;
+        box-shadow: none;
+    }
+    
+    .dropdown-submenu .dropdown-toggle::after {
+        float: right;
+        transform: rotate(-90deg);
+        margin-top: 8px;
+    }
+    
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+}
+
+/* Welcome Section - Consolidated Styles */
+.welcome-section {
+    background-color: #f8f9fa;
+    color: #000000;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e9ecef;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    overflow: hidden;
+}
+
+.welcome-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.welcome-section .scrolling-text-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0.25rem 0;
+}
+
+.welcome-section .scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 20s linear infinite;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.3px;
+}
+
+.welcome-section .scrolling-text i {
+    color: #e83e8c;
+    margin-right: 8px;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .welcome-section {
+        padding: 0.6rem 0;
+    }
+    
+    .welcome-section .scrolling-text {
+        font-size: 0.8rem;
+        white-space: normal;
+        animation: scrollTextMobile 15s linear infinite;
+    }
+    
+    @keyframes scrollTextMobile {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
     }
 }
