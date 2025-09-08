@@ -298,6 +298,53 @@
                 background-color: rgba(255, 255, 255, 0.1);
                 transform: translateY(1px);
             }
+            
+            /* Enhanced Dropdown Styles */
+            .dropdown-menu {
+                border: none;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                min-width: 250px;
+                padding: 0.5rem 0;
+                border-radius: 8px;
+                margin-top: 0.5rem;
+            }
+            
+            .dropdown-item {
+                padding: 0.65rem 1.25rem;
+                font-size: 0.95rem;
+                transition: all 0.2s ease;
+                color: #333 !important;
+                border-left: 3px solid transparent;
+            }
+            
+            .dropdown-item:hover, 
+            .dropdown-item:focus {
+                background-color: #f8f9fa !important;
+                color: #014903 !important;
+                border-left-color: #014903;
+                padding-left: 1.5rem;
+            }
+            
+            .dropdown-header {
+                font-size: 0.8rem;
+                font-weight: 600;
+                color: #6c757d;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                padding: 0.5rem 1.25rem;
+            }
+            
+            .dropdown-divider {
+                margin: 0.25rem 0;
+                border-color: rgba(0,0,0,0.05);
+            }
+            
+            .dropdown-item i {
+                width: 20px;
+                text-align: center;
+                color: #014903;
+                font-size: 0.9em;
+            }
         }
         
         /* Header spacing */
@@ -504,8 +551,36 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html" title="Learn about the ministry">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="departments/" title="Explore our departments">Departments</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="departmentsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Explore our departments">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="departmentsDropdown">
+                            <li><h6 class="dropdown-header">Ministry Departments</h6></li>
+                            <li><hr class="dropdown-divider my-1"></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="departments/women-empowerment" title="Women Empowerment Department">
+                                <i class="fas fa-user-shield me-2"></i>Women Empowerment
+                            </a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="departments/gender-affairs" title="Gender Affairs Department">
+                                <i class="fas fa-venus-mars me-2"></i>Gender Affairs
+                            </a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="departments/economic-development" title="Economic Development Department">
+                                <i class="fas fa-chart-line me-2"></i>Economic Development
+                            </a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="departments/health-and-social-welfare" title="Health and Social Welfare Department">
+                                <i class="fas fa-heartbeat me-2"></i>Health & Social Welfare
+                            </a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="departments/education-and-research" title="Education and Research Department">
+                                <i class="fas fa-graduation-cap me-2"></i>Education & Research
+                            </a></li>
+                            <li><a class="dropdown-item d-flex align-items-center" href="departments/legal-and-gender-policy" title="Legal and Gender Policy Department">
+                                <i class="fas fa-balance-scale me-2"></i>Legal & Gender Policy
+                            </a></li>
+                            <li><hr class="dropdown-divider my-1"></li>
+                            <li><a class="dropdown-item text-center fw-bold" href="departments/" title="View all departments">
+                                <i class="fas fa-arrow-right me-1"></i>View All Departments
+                            </a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
