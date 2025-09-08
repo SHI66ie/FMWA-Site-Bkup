@@ -51,6 +51,78 @@
     margin-bottom: 0;
 }
 
+/* Department Title Bar */
+.department-title-bar {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 0;
+    margin: 0 -15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.department-title {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+}
+
+.breadcrumb-item {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: #fff;
+    font-weight: 500;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.5);
+    content: ">";
+    padding: 0 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .department-title-bar {
+        padding: 0.6rem 0;
+    }
+    
+    .department-title {
+        font-size: 1.2rem;
+    }
+    
+    .breadcrumb {
+        display: none; /* Hide breadcrumb on mobile */
+    }
+}
+
 /* Responsive adjustments */
 @media (max-width: 991.98px) {
     .department-header {
