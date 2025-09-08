@@ -1,58 +1,1220 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #fff;
+/* Text Styling */
+p {
+    text-align: left;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
-/* For organogram.html, add spacing only to the main content */
-.page-content {
-    padding: 40px 0 40px 0;
-}
-
-/* Ensure navbar and footer are flush with edges */
-.navbar.main-nav,
-footer {
-    margin: 0;
-    padding: 0;
+/* Welcome Section */
+.welcome-section {
+    position: relative;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0a4b0a; /* Dark green background */
+    color: white;
     width: 100%;
+    margin: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Scrolling Text Animation */
+.scrolling-text {
+    white-space: nowrap;
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 25s linear infinite;
+    margin: 0;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.scrolling-text i {
+    color: #f9ca24; /* Yellow color for icons */
+    margin-right: 8px;
+}
+
+/* Ensure text doesn't wrap */
+.scrolling-text-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/* Pause animation on hover */
+.welcome-section:hover .scrolling-text {
+    animation-play-state: paused;
+}
+
+/* Scrolling text styles */
+.welcome-section .scrolling-text-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.welcome-section .scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 20s linear infinite;
+    font-weight: 500;
+}
+
+.welcome-section .scrolling-text i {
+    color: #ffc107; /* Yellow icons for better visibility */
+    margin: 0 10px;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .welcome-section {
+        padding: 0.6rem 0;
+        margin-top: 60px; /* More space on mobile */
+    }
+    
+    .welcome-section .scrolling-text {
+        font-size: 0.8rem;
+        animation-duration: 20s; /* Slightly faster on mobile */
+    }
+    
+    .welcome-section {
+        padding: 0.6rem 0;
+    }
+}
+
+.scrolling-text-container {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.1); /* For debugging */
+}
+
+.scrolling-text {
+    position: absolute;
     left: 0;
     right: 0;
+    margin: 0 auto;
+    white-space: nowrap;
+    width: fit-content;
+    animation: scroll 120s infinite;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+        animation-timing-function: linear;
+    }
+    90% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+        animation-timing-function: ease-in;
+    }
+}
+
+/* Pause on hover */
+.scrolling-text-container:hover .scrolling-text {
+    animation-play-state: paused;
+}
+
+/* Global Styles */
+:root {
+    --primary-color: #014903;
+    --secondary-color: #6c757d;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.left-align-section {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .left-align-section {
+        max-width: 600px;
+        margin-left: 40px !important;
+    }
+}
+
+.functions-list {
+    line-height: 1.7;
+}
+
+/* Leadership section styles */
+.leadership-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.leadership-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+/* Leadership profile images */
+.leadership-profile {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1.5rem;
+}
+
+/* PermSec specific styling */
+.permsec-profile {
+    width: 200px !important;
+    height: 200px !important;
+    min-width: 200px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+    margin-right: 1.5rem !important;
+    position: relative;
+}
+
+.permsec-profile img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: #014903;
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #013d03;
+    border-color: #013001;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Bar */
+.top-bar {
+    font-size: 0.875rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-bar a {
+    color: white;
+    margin-left: 15px;
+}
+
+/* Navigation */
+.navbar {
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+    transition: all 0.3s ease;
+}
+
+.main-nav .navbar-brand img {
+    height: 80px;
+    transition: all 0.3s ease;
+}
+
+.main-nav .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav .navbar-brand h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+}
+
+.navbar.scrolled {
+    padding: 0.25rem 0;
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .navbar-brand img {
+    height: 50px;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.75rem 1rem !important;
+    color: var(--dark-color) !important;
+    position: relative;
+}
+
+.nav-link:after {
+    display: none; /* Remove the underline completely */
+}
+
+.nav-link:hover:after,
+.nav-link.active:after {
+    width: 80%;
+}
+
+.dropdown-menu[aria-labelledby="aboutDropdown"] {
+    min-width: auto !important;
+    width: auto !important;
+    max-width: fit-content !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.dropdown-menu {
+    background-color: #014903;
+    border: none;
+    border-radius: 4px;
+    margin-top: 8px;
+    min-width: 220px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 0.3rem 0;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    /* Ensure no underline appears */
+    background: none !important;
+}
+
+.dropdown-item, .dropdown-menu a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    color: #fff !important;
+    background: #014903 !important;
+    transition: all 0.2s;
+    padding: 0.3rem 1rem;
+    white-space: normal;
+    line-height: 1.2;
+}
+
+/* Department dropdown panel */
+.dropdown-menu[aria-labelledby="departmentDropdown"] {
+    min-width: 250px !important;
+    padding: 0.3rem 0 !important;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.dropdown-menu[aria-labelledby="aboutDropdown"] {
+    min-width: 180px !important;
+    padding: 0.3rem 0 !important;
+}
+
+.dropdown-submenu .dropdown-menu {
+    left: 100%;
+    top: -4px;
+    margin-left: 0.25rem;
+    border-radius: 4px !important;
+    min-width: 180px !important;
+    padding: 0.2rem 0 !important;
+}
+
+.dropdown-item {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-toggle::after {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* Hidden Navigation Items */
+.nav-item.hidden-nav-item .nav-link {
+    visibility: hidden;
+}
+
+/* Submenu items */
+.dropdown-item.division-special, 
+.dropdown-submenu .dropdown-item {
+    font-size: 10px !important;
+    padding: 0.2rem 0.8rem 0.2rem 1rem;
+    font-weight: 400;
+    white-space: nowrap;
+    line-height: 1.1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.dropdown-item:hover, 
+.dropdown-menu a:hover {
+    background-color: #fff !important;
+    color: #014903 !important;
+}
+
+/* Keep DIVISIONS custom hover */
+.division-special:hover {
+    background-color: #f9ca24 !important;
+    color: #014903 !important;
+}
+
+/* Hero Section */
+.carousel-item {
+    height: 80vh;
+    min-height: 500px;
+    background: no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Hero Heading */
+.hero-section h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Image Styles */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* FMWA Logo */
+.fmwa-logo {
+    height: 161.7px;
+    width: auto;
+    background-color: #014903;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+
+
+.fmwa-navbar-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    color: #014903;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 18px;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo-divider {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1px;
+    height: 90px;
+    background: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 1px;
+}
+
+
+
+.fmwa-logo-stretch {
+    display: block;
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    margin-left: 0;
+    margin-right: 0;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Rounded Circle Images */
+.rounded-circle {
+    border-radius: 50%;
+}
+
+/* Image Maximum Widths */
+.square-image-container {
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    margin-left: 0;
+    position: relative;
+}
+.minister-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.85);
+    padding: 12px 8px 8px 8px;
+    text-align: center;
+}
+.minister-overlay h5 {
+    margin-bottom: 2px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #111;
+    text-shadow: 0 1px 2px #fff;
+}
+.minister-overlay .minister-title {
+    color: #333;
+    font-size: 0.97rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+.bio-caption {
+    background: #FFD600;
+    color: #222;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 4px 4px 4px;
+    font-size: 1rem;
+    margin-top: -6px;
+}
+.minister-title {
+    margin-top: -4px;
+}
+
+.bio-title {
+    display: block;
+    font-size: 0.93rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+}
+
+.square-image-container .minister-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+.minister-image {
+    max-width: 100%;
+    max-height: 320px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.permanent-secretary-image {
+    max-width: 200px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 1000;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.back-to-top.show {
+    display: block;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption {
+    bottom: 30%;
+    z-index: 1;
+}
+
+.carousel-caption h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease;
+}
+
+.carousel-caption p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease 0.3s;
+    animation-fill-mode: both;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+/* Quick Links */
+.quick-links .card {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.quick-links .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.quick-links .card i {
+    color: #014903;
+}
+
+/* Latest News */
+.latest-news .card {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.latest-news .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.latest-news .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.latest-news .btn-link {
+    color: #014903;
+    font-weight: 500;
+}
+
+.latest-news .btn-link:hover {
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+/* Mission & Vision */
+.mission-vision {
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-vision img {
+    transition: all 0.5s ease;
+}
+
+.mission-vision:hover img {
+    transform: scale(1.03);
+}
+
+/* Quick Stats */
+.quick-stats {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #014903 0%, #198754 100%);
+}
+
+.quick-stats .display-4 {
+    font-weight: 700;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    background-color: var(--success-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer h5 {
+    color: white;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
 }
 
 footer {
-    background: #222;
-    color: #fff;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    background-color: #014903 !important;
 }
 
-.footer-widget h4, .footer-widget h5 {
-    color: #fff;
+footer h5::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #014903;
 }
-h1, h2 {
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+    padding-left: 5px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #014903;
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-link:after {
+        display: none;
+    }
+    
+    .carousel-item {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .carousel-item {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.75rem;
+    }
+    
+    .quick-stats .col-6 {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Utility Classes */
+.section-header {
     text-align: center;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 3rem;
 }
-.org-table {
+
+.section-header h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #014903;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.rounded {
+    border-radius: 8px !important;
+}
+
+/* Leadership card image styling */
+/* Square container with shadow to visually isolate each leader */
+.profile-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px; /* subtle rounded corners */
+    background: transparent;
+    margin: 0 auto 1.5rem; /* center & add spacing */
+    aspect-ratio: 1/1; /* Ensures perfect square */
+}
+
+/* Minister photo = fit container exactly */
+.profile-image-container.minister .profile-image {
     width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0; /* keep square */
 }
-.org-table th, .org-table td {
-    border: 1px solid #ccc;
-    padding: 8px;
+
+/* Permanent Secretary – 10% smaller inside its container */
+.profile-image-container .profile-image {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    font-size: 0.85rem;  /* Reduced from default */
+    padding: 0.25rem 0;  /* Reduced padding */
+}
+
+.dropdown-item {
+    padding: 0.25rem 1rem;  /* Reduced vertical padding */
+    white-space: normal;  /* Allow text to wrap */
+}
+
+/* Nested dropdown menu styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -0.5rem;
+    margin-left: 0.1rem;
+    display: none;
+    min-width: 200px;  /* Ensure minimum width */
+}
+
+/* Dropdown menus now only open on click */
+.dropdown-submenu > .dropdown-menu {
+    display: none;
+}
+
+.dropdown-submenu.show > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu > a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #000;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+/* Add custom styles below this line */
+
+h2.section-title, h2.section-title.mb-4 {
+    font-size: 1.4rem !important;
+    line-height: 1.08 !important;
+}
+
+.background-compact {
+    font-size: 0.98rem;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.5rem;
+    color: #222;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.text-primary, h2.text-primary, h3.text-primary, h5.text-primary, i.text-primary, .card-title.text-primary {
+    color: #014903 !important;
+}
+.bg-primary {
+    background-color: #014903 !important;
+}
+
+
+/* Hero carousel logo - shrink size */
+.carousel-item img[alt="FMWA Logo"] {
+    width: 50% !important; /* 50% of its container */
+    height: auto !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.dropdown-menu.show {
+  display: block !important;
+}
+
+#departmentDropdown {
+    font-size: 12px !important;
+}
+
+.division-special:hover {
+    background-color: #f9ca24 !important;
+    color: #014903 !important;
+    text-transform: uppercase;
+}
+
+/* Bootstrap 5 submenu support */
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    right: auto;
+    margin-top: 0;
+    margin-left: 0;
+    min-width: 100px !important;
+    width: 120px !important;
+    padding: 0.25rem 0.5rem !important;
+    display: none;
+    position: absolute;
+    z-index: 2000;
+}
+
+.dropdown-submenu > .dropdown-menu > li > a.dropdown-item {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+.dropdown-submenu.show > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    display: none;
+    position: absolute;
+}
+.dropdown-submenu.show > .dropdown-menu {
+    display: block;
+}
+
+
+/* Custom Scrollbar - Cross-browser compatible */
+/* For WebKit browsers (Chrome, Safari, newer Edge) */
+/* These will be ignored by non-WebKit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0b5ed7;
+}
+
+/* Standard scrollbar styling */
+* {
+    /* For IE and Edge */
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* For modern browsers that support scrollbar styling */
+@supports (scrollbar-width: thin) {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--primary-color) #f1f1f1;
+    }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #0b5ed7;
+}
+
+/* Expanded Content Styles */
+.expanded-content {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    animation: fadeInDown 0.3s ease-in-out;
+}
+
+.expanded-content h5 {
+    color: #014903;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.expanded-content ul {
+    margin-bottom: 1rem;
+}
+
+.expanded-content .list-unstyled li {
+    padding: 0.25rem 0;
+    color: #495057;
+}
+
+.expanded-content .small {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.expanded-content .small li {
+    margin-bottom: 0.25rem;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Press Card Styling */
+.press-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+/* Ensure proper spacing for paragraphs within press card */
+.press-card p {
+    margin-bottom: 1.2em;
+    line-height: 1.7;
+}
+
+/* Keep headings and special elements left-aligned */
+.press-card h1,
+.press-card h2,
+.press-card h3,
+.press-card h4,
+.press-card h5,
+.press-card h6,
+.press-card .news-date,
+.press-card em {
+    text-align: left;
+    /* text-justify removed for better browser compatibility */
+    text-align-last: left; /* Better cross-browser support */
+}
+
+/* Compact header styles */
+.page-header {
+    padding: 0.5rem 0;
+}
+
+.page-header .text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 0.5rem 1rem;
 }
-.org-table th {
-    background: #f5f5f5;
+
+.page-header .text-center h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0.25rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    max-width: 800px;
 }
-.org-header {
-    font-weight: bold;
-    background: #e8e8e8;
+
+.page-header .text-center .lead {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0.1rem 0 0;
+    max-width: 700px;
+    opacity: 0.9;
 }
-.org-centered-title {
-    text-align: center;
-    font-weight: bold;
+/* ===== Press Release Text Justification ===== */
+.press-release-content p,
+.press-release-content li {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-spacing: -0.05em;
+    line-height: 1.7;
+    margin-bottom: 1.2em;
+}
+
+/* Prevent justification in headings and other elements */
+.press-release-content h1,
+.press-release-content h2,
+.press-release-content h3,
+.press-release-content h4,
+.press-release-content h5,
+.press-release-content h6,
+.press-release-content img,
+.press-release-content .gallery,
+.press-release-content .news-date {
+    text-align: left;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* Update existing press-card for better compatibility */
+.press-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+/* Ensure proper spacing for paragraphs within press card */
+.press-card p {
+    margin-bottom: 1.2em;
+    line-height: 1.7;
 }

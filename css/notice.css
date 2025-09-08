@@ -1,0 +1,124 @@
+/* Maintenance Notice */
+.maintenance-notice {
+    background-color: #ffc107;
+    color: #000;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1040;
+}
+
+.maintenance-notice i {
+    color: #dc3545;
+    margin: 0 10px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    position: relative;
+    text-align: center;
+    padding: 8px 0;
+    background-color: #0a4b0a;
+    color: white;
+    width: 100%;
+    margin: 0;
+    z-index: 99; /* Just below the header */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+    top: 0;
+}
+
+/* Scrolling text animation */
+@keyframes scrollText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.scrolling-text {
+    white-space: nowrap;
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 25s linear infinite;
+    margin: 0;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.scrolling-text i {
+    color: #f9ca24;
+    margin: 0 10px;
+}
+
+.scrolling-text-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/* Pause animation on hover */
+.welcome-section:hover .scrolling-text {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .welcome-section {
+        padding: 0.6rem 0;
+    }
+    
+    .scrolling-text {
+        font-size: 0.8rem;
+        animation-duration: 20s;
+    }
+}
+
+/* Body padding for fixed elements */
+body {
+    padding-top: 130px; /* Reduced to accommodate welcome section */
+}
+
+/* Welcome section positioning */
+.welcome-section {
+    position: fixed;
+    top: 100px; /* Below header, above content */
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+/* Adjust content to start below welcome section */
+.hero-section {
+    margin-top: 40px; /* Space for welcome section */
+}
+
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 160px; /* Adjusted for mobile */
+    }
+    
+    .welcome-section {
+        top: 90px; /* Adjusted for mobile header */
+    }
+    
+    .hero-section {
+        margin-top: 35px; /* Adjusted for mobile */
+    }
+}
+
+/* Header positioning */
+.main-header {
+    position: fixed;
+    top: 40px; /* Space for maintenance notice */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #014903;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}

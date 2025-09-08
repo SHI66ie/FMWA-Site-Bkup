@@ -1,0 +1,17 @@
+/* Progress bar styles for department pages */
+.progress {
+    height: 25px;
+    font-size: 0.9rem;
+}
+
+.progress-bar {
+    background-color: #0d6efd;
+}
+
+/* Ensure proper contrast for accessibility */
+.progress-bar[aria-valuenow] {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

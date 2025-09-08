@@ -1,0 +1,93 @@
+/* Welcome Section Styling - High Priority */
+/* Welcome Section Styling - High Priority */
+.welcome-section {
+    background-color: #f8f9fa !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-top: 1px solid #e9ecef !important;
+    border-bottom: 1px solid #e9ecef !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    overflow: hidden !important;
+    position: relative !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    z-index: 100 !important;
+}
+
+/* Style notice within scrolling text */
+.scrolling-text .fa-tools {
+    color: #ffc107 !important;
+    margin-right: 5px;
+}
+
+.scrolling-text .notice-alert {
+    color: #d63384;
+    font-weight: bold;
+}
+
+/* Ensure header has no bottom margin */
+.main-header {
+    margin-bottom: 0 !important;
+}
+
+/* Remove any spacing after header */
+.main-header + * {
+    margin-top: 0 !important;
+}
+
+.welcome-section .scrolling-text-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.welcome-section .scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 60s linear infinite;
+    margin: 0;
+    font-size: 0.88rem; /* Slightly smaller font */
+    color: #2c3e50;
+    font-weight: 500;
+    line-height: 1.2; /* Tighter line height */
+}
+
+.welcome-section .scrolling-text i {
+    color: #8e44ad;
+    margin: 0 10px;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Pause animation on hover */
+.welcome-section .scrolling-text:hover {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .welcome-section {
+        padding: 0.6rem 0;
+    }
+    
+    .welcome-section .scrolling-text {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .welcome-section .scrolling-text {
+        font-size: 0.8rem;
+    }
+    
+    .welcome-section .scrolling-text i {
+        margin: 0 5px;
+    }
+}

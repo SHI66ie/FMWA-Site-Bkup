@@ -1,0 +1,57 @@
+/* Downloads Section */
+.downloads-section .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.downloads-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.downloads-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.downloads-section .card-body {
+    padding: 1.5rem;
+}
+
+.downloads-section .card i {
+    margin-bottom: 1rem;
+}
+
+.downloads-section .card h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.downloads-section .text-muted {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem !important;
+}
+
+.downloads-section .btn-sm {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.downloads-section .btn-outline-primary {
+    border-width: 1px;
+}
+
+.downloads-section .fa-file-pdf {
+    color: #dc3545;
+}
+
+.downloads-section .fa-file-word {
+    color: #0d6efd;
+}
+
+.downloads-section .fa-file-excel {
+    color: #198754;
+}
+
+.downloads-section .fa-file-powerpoint {
+    color: #fd7e14;
+}

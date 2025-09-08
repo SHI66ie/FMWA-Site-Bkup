@@ -1,0 +1,149 @@
+/* Sleek Welcome Banner */
+.welcome-banner {
+    background: #ffffff;
+    color: #2c3e50;
+    padding: 2rem 0;
+    position: relative;
+    border-bottom: 1px solid #eaeff5;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+}
+
+.welcome-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.welcome-content {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 2rem;
+}
+
+.welcome-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.welcome-divider {
+    width: 50px;
+    height: 2px;
+    background: #0d6efd;
+    margin: 1rem 0;
+    border-radius: 1px;
+}
+
+.welcome-slogan {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #6c757d;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 600px;
+    letter-spacing: 0.2px;
+}
+
+.welcome-cta {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-cta {
+    padding: 0.65rem 1.75rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    background: #0d6efd;
+    color: white;
+    border: none;
+}
+
+.btn-cta:hover {
+    background: #0b5ed7;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(13, 110, 253, 0.2);
+}
+
+.btn-outline-light {
+    padding: 0.65rem 1.75rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    color: #2c3e50;
+    border: 1px solid #e0e6ed;
+    background: transparent;
+}
+
+.btn-outline-light:hover {
+    background: #f8f9fa;
+    border-color: #d0d7e0;
+    color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .welcome-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+    
+    .welcome-content {
+        padding-right: 0;
+        margin-bottom: 1.25rem;
+    }
+    
+    .welcome-divider {
+        margin: 1rem auto;
+    }
+    
+    .welcome-slogan {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    .welcome-cta {
+        justify-content: center;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-banner {
+        padding: 1.5rem 0;
+    }
+    
+    .welcome-title {
+        font-size: 1.6rem;
+    }
+    
+    .welcome-slogan {
+        font-size: 1rem;
+    }
+    
+    .welcome-cta {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .welcome-cta .btn {
+        width: 100%;
+        margin: 0.15rem 0;
+        padding: 0.6rem 1rem;
+    }
+}

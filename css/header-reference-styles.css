@@ -1,0 +1,192 @@
+/* Header and Welcome Section Styles to match reference site */
+
+/* Header Styles */
+.main-nav {
+    background-color: #014903 !important; /* Dark green background */
+    padding: 8px 0 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.navbar-brand {
+    padding: 0 15px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.fmwa-logo-stretch {
+    height: 50px !important;
+    width: auto !important;
+    margin-right: 10px !important;
+}
+
+.fmwa-navbar-title {
+    color: white !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    text-shadow: none !important;
+}
+
+/* Navigation Links */
+.main-nav .navbar-nav {
+    margin-left: auto !important;
+}
+
+.main-nav .nav-item {
+    margin: 0 2px !important;
+}
+
+.main-nav .nav-link {
+    color: white !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    padding: 10px 12px !important;
+    text-transform: uppercase !important;
+    transition: all 0.2s ease !important;
+    position: relative !important;
+}
+
+.main-nav .nav-link:hover {
+    color: #f9ca24 !important; /* Yellow color on hover */
+    background-color: transparent !important;
+}
+
+.main-nav .nav-link.active {
+    color: #ffd700 !important;
+    font-weight: 600 !important;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+}
+
+.dropdown-item {
+    padding: 8px 20px !important;
+    font-size: 13px !important;
+    color: #333 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    position: relative;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa !important;
+    color: #0a4b1e !important;
+}
+
+/* Dropdown Submenu */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    display: none;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu > a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover > a:after {
+    border-left-color: #0a4b1e;
+}
+
+/* Adjust for RTL */
+[dir="rtl"] .dropdown-submenu > .dropdown-menu {
+    left: auto;
+    right: 100%;
+    margin-left: 0;
+    margin-right: -1px;
+}
+
+[dir="rtl"] .dropdown-submenu > a:after {
+    border-left-width: 0;
+    border-right: 5px solid #ccc;
+    margin-left: -10px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .dropdown-submenu:hover > a:after {
+    border-right-color: #0a4b1e;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background-color: #f5f5f5 !important;
+    border-top: 1px solid #e0e0e0 !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    padding: 5px 0 !important;
+    margin: 0 !important;
+    font-family: 'Open Sans', Arial, sans-serif !important;
+    font-size: 13px !important;
+    color: #333 !important;
+    overflow: hidden !important;
+}
+
+.scrolling-text-container {
+    width: 100% !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
+
+.scrolling-text {
+    display: inline-block !important;
+    padding-left: 100% !important;
+    animation: scrollText 25s linear infinite !important;
+    margin: 0 !important;
+    color: #2c3e50 !important;
+    font-weight: 400 !important;
+}
+
+.scrolling-text i {
+    margin: 0 8px !important;
+    color: #0a4b1e !important; /* Match header green */
+    font-size: 12px !important;
+}
+
+@keyframes scrollText {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .fmwa-navbar-title {
+        font-size: 12px !important;
+    }
+    
+    .main-nav .nav-link {
+        padding: 8px 10px !important;
+        font-size: 12px !important;
+    }
+    
+    .welcome-section {
+        font-size: 12px !important;
+    }
+}

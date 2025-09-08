@@ -1,0 +1,74 @@
+/* Welcome Section Styling - Enhanced */
+.welcome-section {
+    background-color: #f8f9fa;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e9ecef;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.welcome-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.welcome-section .scrolling-text-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0.25rem 0;
+}
+
+.welcome-section .scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 20s linear infinite;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.welcome-section .scrolling-text i {
+    color: #e83e8c;
+    margin-right: 8px;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .welcome-section {
+        padding: 0.6rem 0;
+    }
+    
+    .welcome-section .scrolling-text {
+        font-size: 0.8rem;
+        white-space: normal;
+        animation: scrollTextMobile 15s linear infinite;
+    }
+    
+    @keyframes scrollTextMobile {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}

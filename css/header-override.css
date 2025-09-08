@@ -1,0 +1,19 @@
+/* Header Override - Loaded last to ensure styles take effect */
+nav.navbar.navbar-expand-lg.navbar-dark.main-nav,
+.navbar,
+.main-nav {
+    background-color: #014903 !important;
+    background: #014903 !important;
+}
+
+/* Remove any box shadow or border that might be causing visual issues */
+nav.navbar,
+.main-nav {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Ensure the navbar brand text is green */
+.navbar-brand .fmwa-navbar-title {
+    color: #014903 !important;
+}

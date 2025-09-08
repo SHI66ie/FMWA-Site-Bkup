@@ -1,0 +1,72 @@
+/* Navigation Fixes to prevent text movement on hover */
+
+/* Main navigation links */
+.main-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 15px 20px !important;
+    text-transform: uppercase;
+    font-size: 11px;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    min-width: 90px;
+    text-align: center;
+    transition: color 0.2s ease !important;
+    border: 2px solid transparent;
+}
+
+/* Prevent text movement on hover */
+.main-nav .nav-item {
+    position: relative;
+    margin: 0 2px;
+}
+
+.main-nav .nav-link::after {
+    content: attr(title);
+    display: block;
+    font-weight: 500;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    white-space: nowrap;
+}
+
+/* Hover effect */
+.main-nav .nav-link:hover {
+    color: #f9ca24 !important;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+/* Active state */
+.main-nav .nav-item .nav-link.active,
+.main-nav .nav-item .nav-link:focus,
+.main-nav .nav-item .nav-link:active {
+    border-bottom: none !important;
+    box-shadow: none !important;
+    color: #f9ca24 !important;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+/* Dropdown menu items */
+.dropdown-menu .dropdown-item {
+    padding: 8px 20px;
+    white-space: nowrap;
+    min-width: 200px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .main-nav .nav-link {
+        padding: 12px 15px !important;
+        min-width: auto;
+        text-align: left;
+    }
+    
+    .navbar-collapse {
+        padding: 10px 0;
+    }
+}

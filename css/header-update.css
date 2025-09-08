@@ -1,0 +1,276 @@
+/* Header Update to match reference design */
+
+/* Top Bar Styling */
+.top-bar {
+    background-color: #014903; /* Green color */
+    color: white;
+    padding: 8px 0;
+    font-size: 0.85rem;
+    border-bottom: none;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.top-bar-text {
+    display: flex;
+    gap: 20px;
+}
+
+.top-bar-text span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.top-bar .social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.top-bar .social-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.top-bar .social-links a:hover {
+    opacity: 0.8;
+}
+
+/* Navigation Bar */
+.main-nav {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.fmwa-logo-stretch {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.fmwa-navbar-title {
+    color: #014903;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #014903;
+}
+
+/* Dropdown Menus */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    padding: 10px 0;
+    margin-top: 0;
+    border-top: 3px solid #014903;
+}
+
+.dropdown-item {
+    padding: 8px 20px;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #014903;
+    padding-left: 25px;
+}
+
+/* Submenu Styling */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -10px;
+    margin-left: -1px;
+    min-width: 200px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #fff;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-nav {
+        padding: 10px 0;
+    }
+    
+    .nav-item {
+        margin: 5px 0;
+    }
+    
+    .dropdown-menu {
+        margin-left: 15px;
+        box-shadow: none;
+        border: 1px solid #eee;
+    }
+}
+
+.top-bar-text i {
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    font-size: 1.1em;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+/* Logo and Title Styling */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    margin: 0;
+}
+
+.fmwa-logo-stretch {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.fmwa-navbar-title {
+    color: #014903 !important; /* Site green color */
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0 15px;
+    border-left: 1px solid rgba(1, 73, 3, 0.3); /* Green border to match */
+}
+
+/* Navigation Styling */
+.main-nav,
+nav.navbar.navbar-expand-lg.navbar-dark.main-nav,
+nav.navbar {
+    background-color: #014903 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-item {
+    margin: 0 2px;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 20px 25px !important;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #f9ca24 !important;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Active State */
+.nav-item.active .nav-link,
+.nav-link.active {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #f9ca24 !important;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    padding: 0;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    color: #333 !important;
+    font-weight: 400;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #014903 !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .fmwa-logo-stretch {
+        height: 50px;
+    }
+    
+    .fmwa-navbar-title {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    
+    .nav-link {
+        padding: 12px 15px !important;
+        font-size: 0.85rem;
+    }
+    
+    .dropdown-menu {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
