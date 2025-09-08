@@ -87,32 +87,50 @@
             }
             
             .navbar-collapse {
-                background-color: #014903;
-                padding: 15px;
-                margin-top: 10px;
-                border-radius: 4px;
+                background-color: #014903 !important;
+                padding: 15px !important;
+                margin-top: 10px !important;
+                border-radius: 4px !important;
+                color: white !important;
+            }
+            
+            .navbar-nav {
+                width: 100%;
+            }
+            
+            .nav-item {
+                width: 100%;
+            }
+            
+            .nav-link {
+                color: white !important;
+                padding: 10px 15px !important;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
             }
             
             .dropdown-menu {
-                background-color: #014903 !important; /* Match the main nav color */
-                border: none;
-                box-shadow: none;
-                padding: 0;
-                margin: 0;
+                background-color: #013a03 !important;
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
                 position: static !important;
                 transform: none !important;
-                display: flex !important;
-                flex-direction: row;
-                flex-wrap: wrap;
-                width: 100%;
+                display: none !important;
+                width: 100% !important;
+            }
+            
+            .dropdown-menu.show {
+                display: block !important;
             }
             
             .dropdown-item {
                 color: white !important;
-                padding: 10px 15px;
+                padding: 10px 25px !important;
                 white-space: nowrap;
                 border-bottom: 1px solid rgba(255,255,255,0.1);
                 width: 100%;
+                background-color: transparent !important;
             }
             
             .dropdown-item:hover, 
