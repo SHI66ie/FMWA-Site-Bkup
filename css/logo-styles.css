@@ -24,13 +24,21 @@
     margin-right: 20px !important;
 }
 
-/* Vertical line */
+/* Vertical line - more visible version */
 .vertical-line {
-    width: 2px;
-    height: 60px;
-    background: #ffffff !important;
+    content: '';
+    display: block !important;
+    width: 2px !important;
+    height: 80% !important;
+    min-height: 50px !important;
+    background-color: #ffffff !important;
     margin: 0 20px !important;
-    display: inline-block !important;
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.7) !important;
+    position: relative;
+    z-index: 1000;
+    border: none !important;
+    padding: 0 !important;
+    flex-shrink: 0;
 }
 
 /* Ministry name styles */
