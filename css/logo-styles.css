@@ -10,10 +10,12 @@
 /* Vertical line next to logo */
 .vertical-line {
     height: 80%;
-    width: 1px;
-    background-color: rgba(255, 255, 255, 0.3);
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
     margin: 0 15px;
     align-self: center;
+    display: block !important;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
 /* Navigation bar styles */
