@@ -446,10 +446,11 @@ a {
     height: auto;
 }
 
-/* FMWA Logo */
-.fmwa-logo {
-    height: 200px; /* Significantly increased size */
-    width: auto;
+/* FMWA Logo - Important: These styles must take precedence */
+.navbar-brand .fmwa-logo {
+    height: 200px !important;
+    width: auto !important;
+    max-width: 100% !important;
     background-color: #014903;
     padding: 8px;
     border-radius: 12px;
