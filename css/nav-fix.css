@@ -1,0 +1,27 @@
+/* Navigation bar color fix */
+nav.navbar.navbar-expand-lg.navbar-dark.main-nav {
+    background-color: #014903 !important;
+    background-image: none !important;
+}
+
+/* Remove any potential blue overlay */
+nav.navbar.navbar-expand-lg.navbar-dark.main-nav * {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Force the container to be transparent */
+.navbar > .container-fluid {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Remove any box shadow that might be causing a blue tint */
+.navbar.navbar-expand-lg.navbar-dark.main-nav {
+    box-shadow: none !important;
+}
+
+/* Ensure the body background is white */
+body {
+    background-color: #ffffff !important;
+}
