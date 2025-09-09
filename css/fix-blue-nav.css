@@ -1,0 +1,21 @@
+/* Fix for blue navigation bar */
+.navbar.navbar-expand-lg.navbar-dark.main-nav {
+    background-color: #014903 !important;
+    background-image: none !important;
+}
+
+/* Remove any potential blue overlay */
+.navbar.navbar-expand-lg.navbar-dark.main-nav::before,
+.navbar.navbar-expand-lg.navbar-dark.main-nav::after {
+    display: none !important;
+}
+
+/* Ensure no blue tint from parent elements */
+html, body {
+    background-color: #ffffff !important;
+}
+
+/* Force the navigation bar background */
+.navbar.navbar-expand-lg.navbar-dark.main-nav .container-fluid {
+    background-color: transparent !important;
+}
