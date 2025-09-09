@@ -36,31 +36,52 @@ html, body {
     border: none !important;
 }
 
-/* Logo container */
-.logo-container {
+/* Header content container */
+.header-content {
     display: flex;
     align-items: center;
-    height: 100%;
+    width: 100%;
     padding: 10px 0;
 }
 
 /* Logo styles */
-.fmwa-logo {
-    height: 100px !important;
-    width: auto !important;
-    max-width: 100% !important;
-    display: block !important;
-    margin-left: 10mm !important;
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
-/* Vertical line next to logo */
+.fmwa-logo {
+    height: 100px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin-left: 10mm;
+}
+
+/* Vertical line container */
+.header-divider {
+    margin: 0 20mm; /* 2cm space on both sides of the line */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Vertical line */
 .vertical-line {
-    height: 66.66px; /* 2/3 of 100px logo height */
-    width: 0.7mm;
+    height: 80px; /* Slightly shorter than logo for better proportions */
+    width: 1px;
     background-color: white;
-    margin-left: 5mm; /* 5mm space from logo */
-    display: inline-block;
-    border-radius: 1px;
+    display: block;
+}
+
+/* Space for future text */
+.header-text {
+    flex: 1;
+    color: white;
+    padding: 0 20px;
+    /* Add styles for your future text here */
 }
 
 /* Add padding to body to account for fixed navbar and notice */
