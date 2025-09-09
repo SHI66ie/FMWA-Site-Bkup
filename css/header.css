@@ -53,11 +53,12 @@ html, body {
 }
 
 .fmwa-logo {
-    height: 100px;
-    width: auto;
-    max-width: 100%;
-    display: block;
-    margin-left: 10mm;
+    height: 100px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    display: block !important;
+    margin: 0 10mm 0 0 !important;
+    object-fit: contain !important;
 }
 
 /* Vertical line container */
@@ -166,7 +167,7 @@ body > *:not(.main-nav) {
     display: inline-block;
     white-space: normal;
     font-size: 1rem;
-    color: #014903 !important; /* Set title color to green */
+    color: var(--primary-color) !important; /* Set title color to green */
     font-weight: 700;
     margin-left: 8px;
     text-transform: uppercase;
@@ -217,14 +218,14 @@ body > *:not(.main-nav) {
 }
 
 .top-bar {
-    background-color: #014903;
+    background-color: var(--primary-color);
     color: white;
     padding: 6px 0;
     font-size: 12px;
 }
 
 .main-nav {
-    background-color: #014903;
+    background-color: var(--primary-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -363,7 +364,7 @@ body > *:not(.main-nav) {
 /* Mobile menu adjustments */
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: #014903;
+        background-color: var(--primary-color);
         padding: 0.5rem;
         margin-top: 10px;
         border-radius: 4px;
@@ -785,7 +786,7 @@ body > *:not(.main-nav) {
     display: inline-block;
     white-space: normal;
     font-size: 1rem;
-    color: #014903 !important; /* Set title color to green */
+    color: var(--primary-color) !important; /* Set title color to green */
     font-weight: 700;
     margin-left: 8px;
     text-transform: uppercase;
@@ -836,7 +837,7 @@ body > *:not(.main-nav) {
 }
 
 .top-bar {
-    background-color: #014903;
+    background-color: var(--primary-color);
     color: white;
     padding: 6px 0;
     font-size: 12px;
@@ -1039,7 +1040,7 @@ body > *:not(.main-nav) {
 
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: #014903;
+        background-color: var(--primary-color);
         padding: 0.5rem;
         margin-top: 10px;
         border-radius: 4px;
