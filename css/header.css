@@ -27,62 +27,13 @@ html, body {
     right: 0 !important;
     z-index: 1060 !important;
     width: 100% !important;
-    background-color: var(--primary-color) !important;
+    background-color: #014903 !important;
     margin: 0 !important;
     padding: 0 !important;
     min-height: 120px !important; /* Adjusted to better fit the 100px logo */
     display: flex !important;
     align-items: center !important;
     border: none !important;
-}
-
-/* Header content container */
-.header-content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px 0;
-}
-
-/* Logo styles */
-.navbar-brand {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-.fmwa-logo {
-    height: 100px !important;
-    width: auto !important;
-    max-width: 100% !important;
-    display: block !important;
-    margin: 0 10mm 0 0 !important;
-    object-fit: contain !important;
-}
-
-/* Vertical line container */
-.header-divider {
-    margin: 0 20mm; /* 2cm space on both sides of the line */
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-/* Vertical line */
-.vertical-line {
-    height: 80px; /* Slightly shorter than logo for better proportions */
-    width: 1px;
-    background-color: white;
-    display: block;
-}
-
-/* Space for future text */
-.header-text {
-    flex: 1;
-    color: white;
-    padding: 0 20px;
-    /* Add styles for your future text here */
 }
 
 /* Add padding to body to account for fixed navbar and notice */
@@ -167,7 +118,7 @@ body > *:not(.main-nav) {
     display: inline-block;
     white-space: normal;
     font-size: 1rem;
-    color: var(--primary-color) !important; /* Set title color to green */
+    color: #014903 !important; /* Set title color to green */
     font-weight: 700;
     margin-left: 8px;
     text-transform: uppercase;
@@ -218,14 +169,14 @@ body > *:not(.main-nav) {
 }
 
 .top-bar {
-    background-color: var(--primary-color);
+    background-color: #014903;
     color: white;
     padding: 6px 0;
     font-size: 12px;
 }
 
 .main-nav {
-    background-color: var(--primary-color);
+    background-color: #014903;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -364,7 +315,7 @@ body > *:not(.main-nav) {
 /* Mobile menu adjustments */
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: var(--primary-color);
+        background-color: #014903;
         padding: 0.5rem;
         margin-top: 10px;
         border-radius: 4px;
@@ -786,7 +737,7 @@ body > *:not(.main-nav) {
     display: inline-block;
     white-space: normal;
     font-size: 1rem;
-    color: var(--primary-color) !important; /* Set title color to green */
+    color: #014903 !important; /* Set title color to green */
     font-weight: 700;
     margin-left: 8px;
     text-transform: uppercase;
@@ -837,7 +788,7 @@ body > *:not(.main-nav) {
 }
 
 .top-bar {
-    background-color: var(--primary-color);
+    background-color: #014903;
     color: white;
     padding: 6px 0;
     font-size: 12px;
@@ -847,7 +798,7 @@ body > *:not(.main-nav) {
 .navbar {
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;
-    background-color: var(--primary-color) !important; /* Using site's primary green */
+    background-color: #014903 !important; /* Changed to site green */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     min-height: 70px; /* Fixed height to prevent layout shift */
 }
@@ -1040,7 +991,7 @@ body > *:not(.main-nav) {
 
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: var(--primary-color);
+        background-color: #014903;
         padding: 0.5rem;
         margin-top: 10px;
         border-radius: 4px;
