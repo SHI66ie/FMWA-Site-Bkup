@@ -1,0 +1,14 @@
+/* Logo styles */
+.fmwa-logo {
+    height: 100px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    display: block !important;
+    margin-left: 1cm !important;
+}
+
+/* Navigation bar styles */
+.navbar.navbar-expand-lg.navbar-dark.main-nav {
+    background-color: #014903 !important;
+    background-image: none !important;
+}
