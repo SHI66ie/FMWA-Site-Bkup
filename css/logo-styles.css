@@ -1,7 +1,14 @@
 /* Logo container */
-.navbar-brand {
+.navbar > .container-fluid {
     padding-left: 1cm !important;
-    margin-right: 0 !important;
+}
+
+/* Logo link */
+.navbar-brand {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
 }
 
 /* Logo styles */
@@ -16,9 +23,10 @@
 /* Vertical line next to logo */
 .vertical-line {
     height: 80%;
+    min-height: 60px;
     width: 2px;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin: 0 15px 0 0 !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    margin: 0 15px 0 15px !important;
     align-self: center;
     display: block !important;
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
