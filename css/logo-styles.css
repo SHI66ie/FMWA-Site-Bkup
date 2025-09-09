@@ -41,6 +41,19 @@
     pointer-events: none;
 }
 
+/* Ministry name styles */
+.ministry-name {
+    color: #ffffff !important;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 30px; /* Space after the vertical line */
+    white-space: nowrap;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
 /* Navigation bar styles */
 .navbar.navbar-expand-lg.navbar-dark.main-nav {
     background-color: #014903 !important;
