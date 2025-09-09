@@ -30,7 +30,7 @@ html, body {
     background-color: #014903 !important;
     margin: 0 !important;
     padding: 0 !important;
-    min-height: 240px !important; /* Increased to accommodate the much larger logo */
+    min-height: 120px !important; /* Adjusted to better fit the 100px logo */
     display: flex !important;
     align-items: center !important;
     border: none !important;
@@ -38,7 +38,7 @@ html, body {
 
 /* Add padding to body to account for fixed navbar and notice */
 body {
-    padding-top: 278px !important; /* Height of navbar (240px) + notice (38px) */
+    padding-top: 158px !important; /* Height of navbar (120px) + notice (38px) */
     margin: 0 !important;
     position: relative !important;
 }
