@@ -142,6 +142,7 @@ body > *:not(.main-nav) {
         font-size: 0.85rem;
         letter-spacing: 0.3px;
         white-space: normal;
+        margin-left: 1.5rem; /* Match desktop margin */
         word-break: break-word;
     }
     
@@ -760,6 +761,7 @@ body > *:not(.main-nav) {
         font-size: 0.85rem;
         letter-spacing: 0.3px;
         white-space: normal;
+        margin-left: 1.5rem; /* Match desktop margin */
         word-break: break-word;
     }
     

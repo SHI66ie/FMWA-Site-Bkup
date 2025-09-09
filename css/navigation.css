@@ -49,6 +49,7 @@
     line-height: 1.2;
     text-transform: uppercase;
     max-width: 200px;
+    margin-left: 1.5rem; /* Add left margin to move text right */
 }
 
 /* Navigation Links */
