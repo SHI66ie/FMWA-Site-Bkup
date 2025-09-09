@@ -29,19 +29,24 @@
 
 /* Vertical line - positioned absolutely */
 .vertical-line {
+    content: '';
     position: relative;
     height: 80%;
     min-height: 60px;
-    width: 3px; /* Slightly thicker */
-    background: #ffffff !important; /* Solid white */
-    background: linear-gradient(to bottom, #ffffff, #f0f0f0) !important; /* Subtle gradient */
+    width: 3px;
+    background: #ffffff !important;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0) !important;
     margin: 0 20px 0 15px !important;
     display: block !important;
-    box-shadow: 0 0 5px rgba(255,255,255,0.5); /* Brighter shadow */
+    box-shadow: 0 0 8px 2px rgba(255,255,255,0.7);
     pointer-events: none;
-    z-index: 1;
-    border: none !important; /* Remove any default borders */
-    opacity: 1 !important; /* Force full opacity */
+    z-index: 1000;
+    border: none !important;
+    opacity: 1 !important;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 /* Ministry name styles */
