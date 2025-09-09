@@ -5,34 +5,32 @@
     align-items: center !important;
 }
 
-/* Logo link */
+/* Logo container */
 .navbar-brand {
     padding: 0 !important;
     margin: 0 !important;
     display: flex !important;
     align-items: center !important;
-    position: relative;
-    gap: 15px; /* Equal spacing between all flex children */
+    height: 100px;
 }
 
 /* Logo styles */
 .fmwa-logo {
-    height: 100px !important;
+    height: 80px !important;
     width: auto !important;
-    max-width: 100% !important;
+    max-width: none !important;
     display: block !important;
     object-fit: contain !important;
-    margin: 0 !important; /* Reset any margins */
+    margin-right: 20px !important;
 }
 
-/* Vertical line - simple and reliable */
+/* Vertical line */
 .vertical-line {
     width: 2px;
     height: 60px;
     background: #ffffff !important;
-    margin: 0 !important; /* Remove margin, using gap instead */
+    margin: 0 20px !important;
     display: inline-block !important;
-    flex-shrink: 0; /* Prevent shrinking */
 }
 
 /* Ministry name styles */
