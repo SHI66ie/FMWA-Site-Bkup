@@ -448,7 +448,7 @@ a {
 
 /* FMWA Logo */
 .fmwa-logo {
-    height: 161.7px;
+    height: 169.8px; /* Increased by 5% from 161.7px */
     width: auto;
     background-color: #014903;
     padding: 6px;
