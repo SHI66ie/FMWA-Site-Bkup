@@ -1,11 +1,16 @@
+/* Logo container */
+.navbar-brand {
+    padding-left: 1cm !important;
+    margin-right: 0 !important;
+}
+
 /* Logo styles */
 .fmwa-logo {
     height: 100px !important;
     width: auto !important;
     max-width: 100% !important;
     display: block !important;
-    margin-left: 1cm !important;
-    margin-right: 0 !important;
+    margin: 0 !important;
 }
 
 /* Vertical line next to logo */
@@ -13,7 +18,7 @@
     height: 80%;
     width: 2px;
     background-color: rgba(255, 255, 255, 0.8);
-    margin: 0 15px;
+    margin: 0 15px 0 0 !important;
     align-self: center;
     display: block !important;
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
