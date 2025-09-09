@@ -36,6 +36,15 @@ html, body {
     border: none !important;
 }
 
+/* Vertical line next to logo */
+.vertical-line {
+    height: 66.66px; /* 2/3 of 100px logo height */
+    width: 0.7mm;
+    background-color: white;
+    margin-left: 5mm; /* 5mm space from logo */
+    display: inline-block;
+}
+
 /* Add padding to body to account for fixed navbar and notice */
 body {
     padding-top: 158px !important; /* Height of navbar (120px) + notice (38px) */
