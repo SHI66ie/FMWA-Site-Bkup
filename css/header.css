@@ -36,6 +36,23 @@ html, body {
     border: none !important;
 }
 
+/* Logo container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px 0;
+}
+
+/* Logo styles */
+.fmwa-logo {
+    height: 100px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    display: block !important;
+    margin-left: 10mm !important;
+}
+
 /* Vertical line next to logo */
 .vertical-line {
     height: 66.66px; /* 2/3 of 100px logo height */
@@ -43,6 +60,7 @@ html, body {
     background-color: white;
     margin-left: 5mm; /* 5mm space from logo */
     display: inline-block;
+    border-radius: 1px;
 }
 
 /* Add padding to body to account for fixed navbar and notice */
