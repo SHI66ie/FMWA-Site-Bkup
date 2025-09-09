@@ -32,13 +32,16 @@
     position: relative;
     height: 80%;
     min-height: 60px;
-    width: 2px;
-    background-color: #ffffff !important;
+    width: 3px; /* Slightly thicker */
+    background: #ffffff !important; /* Solid white */
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0) !important; /* Subtle gradient */
     margin: 0 20px 0 15px !important;
     display: block !important;
-    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    box-shadow: 0 0 5px rgba(255,255,255,0.5); /* Brighter shadow */
     pointer-events: none;
     z-index: 1;
+    border: none !important; /* Remove any default borders */
+    opacity: 1 !important; /* Force full opacity */
 }
 
 /* Ministry name styles */
