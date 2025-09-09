@@ -1,12 +1,6 @@
-/* Navigation Wrapper */
+/* Navigation Wrapper - Removed */
 .main-nav-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1030;
-    background-color: #014903;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide the navigation bar */
 }
 
 /* Navigation Bar Styles */
