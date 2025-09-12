@@ -1,0 +1,23 @@
+/* Fix for navbar position at the top of the page */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure the fixed navbar doesn't overlap content */
+body {
+    padding-top: 70px; /* Adjust this value based on your navbar height */
+}
+
+/* Make sure the navbar stays on top */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
