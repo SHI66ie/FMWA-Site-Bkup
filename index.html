@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/leadership.css?v=1.0.1">
     <link rel="stylesheet" href="css/fix-blue-nav.css">
     <link rel="stylesheet" href="css/nav-styles.css">
-    <link rel="stylesheet" href="css/nav-fix.css">
+    <link rel="stylesheet" href="css/nav-fix.css?v=1.0.2">
     <link rel="stylesheet" href="css/logo-styles.css">
     
     <!-- Bootstrap JS Bundle with Popper (moved to bottom) -->
@@ -881,21 +881,81 @@
     
     <!-- Custom Scripts -->
     <script>
-    // Initialize Bootstrap dropdowns
     document.addEventListener('DOMContentLoaded', function() {
         // Initialize all dropdowns
-        var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
-        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-            return new bootstrap.Dropdown(dropdownToggleEl);
+        const dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+        
+        dropdownElementList.forEach(function (dropdownToggleEl) {
+            // Initialize dropdown
+            const dropdown = new bootstrap.Dropdown(dropdownToggleEl);
+            
+            // Add click event to prevent default behavior
+            dropdownToggleEl.addEventListener('click', function(e) {
+                // Only prevent default for mobile view
+                if (window.innerWidth < 992) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Toggle the dropdown menu
+                    const dropdownMenu = this.nextElementSibling;
+                    if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
+                        const isOpen = dropdownMenu.classList.contains('show');
+                        
+                        // Close all other open dropdowns
+                        document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                            if (menu !== dropdownMenu) {
+                                menu.classList.remove('show');
+                                menu.previousElementSibling?.classList.remove('show');
+                                menu.previousElementSibling?.setAttribute('aria-expanded', 'false');
+                            }
+                        });
+                        
+                        // Toggle current dropdown
+                        if (!isOpen) {
+                            dropdownMenu.classList.add('show');
+                            this.classList.add('show');
+                            this.setAttribute('aria-expanded', 'true');
+                        } else {
+                            dropdownMenu.classList.remove('show');
+                            this.classList.remove('show');
+                            this.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                }
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdownToggleEl.contains(e.target) && !dropdownToggleEl.nextElementSibling?.contains(e.target)) {
+                    const dropdownMenu = dropdownToggleEl.nextElementSibling;
+                    if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
+                        dropdownMenu.classList.remove('show');
+                        dropdownToggleEl.classList.remove('show');
+                        dropdownToggleEl.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
         });
         
-        // Fix for mobile menu toggle
+        // Mobile menu toggle
         const navbarToggler = document.querySelector('.navbar-toggler');
         const navbarCollapse = document.querySelector('.navbar-collapse');
         
         if (navbarToggler && navbarCollapse) {
             navbarToggler.addEventListener('click', function() {
-                navbarCollapse.classList.toggle('show');
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                navbarCollapse.classList.toggle('show', !isExpanded);
+            });
+            
+            // Close mobile menu when clicking on a nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth < 992) {
+                        navbarCollapse.classList.remove('show');
+                        navbarToggler.setAttribute('aria-expanded', 'false');
+                    }
+                });
             });
         }
     });
