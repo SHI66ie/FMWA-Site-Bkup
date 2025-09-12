@@ -24,21 +24,18 @@
     margin-right: 20px !important;
 }
 
-/* Vertical line - visible solid white */
+/* Vertical line - using border for better visibility */
 .vertical-line {
-    content: '';
     display: block !important;
-    width: 2px !important;  /* Increased width for better visibility */
-    height: 60px !important;  /* Fixed height to match logo */
-    background-color: #ffffff !important;
+    width: 0 !important;
+    height: 60px !important;
     margin: 0 20px !important;
-    box-shadow: none !important;
+    border-left: 2px solid #ffffff !important;
     position: relative;
     z-index: 1000;
-    border: none !important;
     padding: 0 !important;
     flex-shrink: 0;
-    align-self: center;  /* Ensure vertical centering */
+    align-self: center;
 }
 
 /* Ministry name styles */
