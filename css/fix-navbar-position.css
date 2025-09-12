@@ -1,31 +1,50 @@
 /* Fix for navbar position at the top of the page */
 html, body {
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
     width: 100%;
     overflow-x: hidden;
 }
 
-/* Ensure the fixed navbar doesn't overlap content */
+/* Remove any default spacing */
 body {
-    padding-top: 80px !important; /* Adjust this value based on your navbar height */
-}
-
-/* Make sure the navbar stays on top */
-nav.bg-\[\#014903\] {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 9999 !important;
-    margin: 0 !important;
-    padding: 0.5rem 1rem !important;
-    width: 100% !important;
-    max-width: 100% !important;
-}
-
-/* Remove any default spacing that might be pushing the navbar down */
-body > *:first-child {
-    margin-top: 0 !important;
     padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Make sure the navbar is fixed at the very top */
+.bg-\[\#014903\] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    margin: 0;
+    padding: 0;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+/* Add padding to the first element after the navbar */
+.bg-\[\#014903\] + * {
+    padding-top: 80px; /* Adjust this based on your navbar height */
+}
+
+/* Ensure container takes full width */
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+/* Adjust logo size if needed */
+.h-\[100px\] {
+    height: 80px; /* Slightly reduce logo height */
+}
+
+/* Ensure content doesn't hide behind navbar */
+main, section, .content-wrapper {
+    margin-top: 80px !important;
 }
