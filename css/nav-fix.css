@@ -25,12 +25,34 @@ body {
 /* Navigation items */
 .navbar-nav {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    position: relative;
+    margin: 0 0.25rem;
 }
 
 .navbar-nav .nav-link {
     color: white !important;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.25rem !important;
     font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 /* Dropdown menu */
@@ -40,12 +62,45 @@ body {
     border-radius: 0.25rem !important;
     padding: 0.5rem 0 !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    margin-top: 0.5rem !important;
+    min-width: 220px;
 }
 
 .dropdown-item {
     color: white !important;
-    padding: 0.5rem 1.5rem !important;
+    padding: 0.75rem 1.5rem !important;
     background-color: transparent !important;
+    transition: all 0.2s ease;
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 0;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    transform: none;
+}
+
+/* Fix for dropdown toggle arrow */
+.navbar .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.5em;
+    vertical-align: 0.15em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    transition: transform 0.2s ease;
+}
+
+.navbar .show > .dropdown-toggle::after {
+    transform: rotate(-180deg);
 }
 
 .dropdown-item:hover,
@@ -75,15 +130,16 @@ body {
 @media (max-width: 991.98px) {
     .navbar-collapse {
         background-color: #014903 !important;
-        padding: 15px !important;
-        margin-top: 10px !important;
+        padding: 10px 15px !important;
+        margin-top: 8px !important;
         border-radius: 4px !important;
         color: white !important;
         position: static !important;
         transform: none !important;
         z-index: 1000;
         border: none !important;
-        box-shadow: none !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+        transition: all 0.3s ease-in-out;
     }
 
     .navbar-collapse.collapse:not(.show) {
@@ -104,11 +160,40 @@ body {
     }
 
     /* Ensure all elements have proper background */
-    .navbar-nav,
-    .dropdown-menu,
-    .dropdown-item,
+    .navbar-nav {
+        margin: 0 -15px;
+    }
+    
+    .nav-item {
+        margin: 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+    
     .nav-link {
+        padding: 12px 20px !important;
+        margin: 0 !important;
+        border: none !important;
+        border-radius: 0 !important;
         background-color: transparent !important;
+    }
+    
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        background-color: rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .dropdown-item {
+        padding-left: 35px !important;
+        color: rgba(255, 255, 255, 0.9) !important;
     }
 
     /* Remove any potential white backgrounds */
