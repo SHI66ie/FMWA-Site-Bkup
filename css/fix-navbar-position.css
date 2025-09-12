@@ -35,12 +35,30 @@ body {
     right: 0 !important;
     z-index: 9999 !important;
     margin: 0 !important;
-    padding: 0.5rem 1rem !important;
+    padding: 0 !important;
     background-color: #014903 !important;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2) !important;
     border-top: 0 !important;
     -webkit-transform: translateZ(0);
     transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Logo styles */
+.header-logo {
+    height: 100px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+/* Container inside nav */
+.bg-\[\#014903\] > .container {
+    padding: 0.5rem 1rem !important;
+    margin: 0 auto !important;
+}
+
+/* Ensure nav items are properly aligned */
+.bg-\[\#014903\] .flex-wrap {
+    align-items: center !important;
 }
 
 /* Ensure content starts below the fixed navbar */
