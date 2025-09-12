@@ -24,7 +24,7 @@
     margin-right: 20px !important;
 }
 
-/* Vertical line - more visible version */
+/* Vertical line - solid white */
 .vertical-line {
     content: '';
     display: block !important;
@@ -32,8 +32,9 @@
     height: 80% !important;
     min-height: 50px !important;
     background-color: #ffffff !important;
+    opacity: 1 !important;
     margin: 0 20px !important;
-    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.7) !important;
+    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.9) !important;
     position: relative;
     z-index: 1000;
     border: none !important;
