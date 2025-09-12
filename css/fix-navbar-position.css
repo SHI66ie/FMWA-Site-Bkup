@@ -1,4 +1,4 @@
-/* Fix for navbar position at the top of the page */
+/* Reset default styles */
 html, body {
     margin: 0;
     padding: 0;
@@ -6,45 +6,86 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Remove any default spacing */
-body {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-}
-
-/* Make sure the navbar is fixed at the very top */
+/* Navbar styles */
 .bg-\[\#014903\] {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 50;
+    z-index: 1000;
     margin: 0;
-    padding: 0;
-    min-height: 70px;
-    display: flex;
-    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #014903 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Add padding to the first element after the navbar */
-.bg-\[\#014903\] + * {
-    padding-top: 80px; /* Adjust this based on your navbar height */
+/* Main content padding to prevent overlap with fixed navbar */
+main {
+    padding-top: 80px; /* Adjust based on your navbar height */
+    min-height: calc(100vh - 80px);
 }
 
-/* Ensure container takes full width */
+/* Container adjustments */
 .container {
     width: 100%;
-    max-width: 100%;
+    max-width: 1320px;
     padding: 0 1rem;
     margin: 0 auto;
 }
 
-/* Adjust logo size if needed */
-.h-\[100px\] {
-    height: 80px; /* Slightly reduce logo height */
+/* Logo adjustments */
+.bg-\[\#014903\] img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
 }
 
-/* Ensure content doesn't hide behind navbar */
-main, section, .content-wrapper {
-    margin-top: 80px !important;
+/* Navigation menu */
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile menu button */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #014903;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    #menu-toggle {
+        display: block;
+    }
+    
+    .bg-\[\#014903\] {
+        padding: 0.5rem;
+    }
+}
+
+/* Ensure content is not hidden behind navbar */
+main > *:first-child {
+    padding-top: 1rem;
 }
