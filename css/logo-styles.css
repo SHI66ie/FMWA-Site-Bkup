@@ -24,17 +24,16 @@
     margin-right: 20px !important;
 }
 
-/* Vertical line - solid white */
+/* Vertical line - clean solid white */
 .vertical-line {
     content: '';
     display: block !important;
-    width: 2px !important;
+    width: 1px !important;  /* Slightly thinner for a cleaner look */
     height: 80% !important;
     min-height: 50px !important;
     background-color: #ffffff !important;
-    opacity: 1 !important;
     margin: 0 20px !important;
-    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.9) !important;
+    box-shadow: none !important;  /* Remove shadow completely */
     position: relative;
     z-index: 1000;
     border: none !important;
