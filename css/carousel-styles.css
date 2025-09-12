@@ -1,0 +1,151 @@
+/* Carousel Styles */
+.carousel {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-item {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(1, 73, 3, 0.8);
+    border-radius: 8px;
+}
+
+.carousel-caption h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-image: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.carousel-control-prev-icon::before {
+    content: '\f053';
+    margin-right: 2px;
+}
+
+.carousel-control-next-icon::before {
+    content: '\f054';
+    margin-left: 2px;
+}
+
+.carousel-indicators {
+    bottom: 1rem;
+    margin: 0;
+    justify-content: flex-start;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 0 1rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+.carousel-indicators .active {
+    background-color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .carousel-item {
+        height: 400px;
+    }
+    
+    .carousel-caption {
+        bottom: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 1.8rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel-item {
+        height: 300px;
+    }
+    
+    .carousel-caption {
+        bottom: 1rem;
+        padding: 0.75rem;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+}

@@ -1,27 +1,132 @@
-/* Navigation bar color fix */
-nav.navbar.navbar-expand-lg.navbar-dark.main-nav {
+/* Reset body padding since navbar is hidden */
+body {
+    padding-top: 0;
+    padding-right: 0 !important;
+    overflow-x: hidden;
+}
+
+/* Fix for white overlay on mobile menu */
+.offcanvas-backdrop,
+.modal-backdrop,
+.fade {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* Navigation bar base styles */
+.navbar {
     background-color: #014903 !important;
     background-image: none !important;
+    padding: 0.5rem 1rem;
+    position: relative;
+    z-index: 1000;
 }
 
-/* Remove any potential blue overlay */
-nav.navbar.navbar-expand-lg.navbar-dark.main-nav * {
+/* Navigation items */
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    background-color: #014903 !important;
+    border: none !important;
+    border-radius: 0.25rem !important;
+    padding: 0.5rem 0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.dropdown-item {
+    color: white !important;
+    padding: 0.5rem 1.5rem !important;
     background-color: transparent !important;
-    background-image: none !important;
 }
 
-/* Force the container to be transparent */
-.navbar > .container-fluid {
-    background-color: transparent !important;
-    background-image: none !important;
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
 }
 
-/* Remove any box shadow that might be causing a blue tint */
-.navbar.navbar-expand-lg.navbar-dark.main-nav {
+/* Mobile menu toggle */
+.navbar-toggler {
+    z-index: 1100;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
     box-shadow: none !important;
 }
 
-/* Ensure the body background is white */
-body {
-    background-color: #ffffff !important;
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Mobile menu styles */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #014903 !important;
+        padding: 15px !important;
+        margin-top: 10px !important;
+        border-radius: 4px !important;
+        color: white !important;
+        position: static !important;
+        transform: none !important;
+        z-index: 1000;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .navbar-collapse.collapse:not(.show) {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    .navbar-collapse.collapse.show {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 15px;
+        overflow: visible !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    /* Ensure all elements have proper background */
+    .navbar-nav,
+    .dropdown-menu,
+    .dropdown-item,
+    .nav-link {
+        background-color: transparent !important;
+    }
+
+    /* Remove any potential white backgrounds */
+    .navbar,
+    .navbar > *,
+    .navbar *:not(.dropdown-item) {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+
+    /* Fix for any remaining white flashes */
+    .collapsing {
+        -webkit-transition: none !important;
+        transition: none !important;
+        display: none;
+    }
+
+    .nav-item {
+        margin: 0.25rem 0;
+    }
 }
