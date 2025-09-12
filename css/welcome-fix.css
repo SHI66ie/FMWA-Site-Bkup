@@ -1,0 +1,33 @@
+/* Welcome Section Positioning Fix */
+.welcome-section {
+    position: relative;
+    top: 100px; /* Match header height */
+    z-index: 900; /* Below header but above other content */
+    margin: 0 !important;
+    padding: 0.8rem 0 !important;
+    width: 100% !important;
+    background-color: #f8f9fa !important;
+    border-bottom: 1px solid #e9ecef !important;
+}
+
+/* Adjust body padding to account for fixed header and welcome section */
+body {
+    padding-top: 140px !important; /* header + welcome section height */
+}
+
+/* Ensure content starts below welcome section */
+main, .leadership-section, #about-section, .quick-links-panel, 
+.news-section, .downloads-section, footer {
+    margin-top: 40px !important; /* Adjust based on welcome section height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .welcome-section {
+        top: 80px; /* Adjusted for mobile header */
+    }
+    
+    body {
+        padding-top: 120px !important; /* Adjusted for mobile */
+    }
+}
