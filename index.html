@@ -467,28 +467,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             
+            <!-- Navigation items have been removed -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="departmentsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Departments
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
-                            <li><a class="dropdown-item" href="departments/child-development.html">Child Development</a></li>
-                            <li><a class="dropdown-item" href="departments/community-development-social-intervention.html">Community Development</a></li>
-                            <li><a class="dropdown-item" href="departments/finance-accounting.html">Finance & Accounting</a></li>
-                            <li><a class="dropdown-item" href="departments/gender-affairs.html">Gender Affairs</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
-                    </li>
+                    <!-- Navigation items removed -->
                 </ul>
             </div>
         </div>
@@ -882,61 +864,6 @@
     <!-- Custom Scripts -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Initialize all dropdowns
-        const dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
-        
-        dropdownElementList.forEach(function (dropdownToggleEl) {
-            // Initialize dropdown
-            const dropdown = new bootstrap.Dropdown(dropdownToggleEl);
-            
-            // Add click event to prevent default behavior
-            dropdownToggleEl.addEventListener('click', function(e) {
-                // Only prevent default for mobile view
-                if (window.innerWidth < 992) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    // Toggle the dropdown menu
-                    const dropdownMenu = this.nextElementSibling;
-                    if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
-                        const isOpen = dropdownMenu.classList.contains('show');
-                        
-                        // Close all other open dropdowns
-                        document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
-                            if (menu !== dropdownMenu) {
-                                menu.classList.remove('show');
-                                menu.previousElementSibling?.classList.remove('show');
-                                menu.previousElementSibling?.setAttribute('aria-expanded', 'false');
-                            }
-                        });
-                        
-                        // Toggle current dropdown
-                        if (!isOpen) {
-                            dropdownMenu.classList.add('show');
-                            this.classList.add('show');
-                            this.setAttribute('aria-expanded', 'true');
-                        } else {
-                            dropdownMenu.classList.remove('show');
-                            this.classList.remove('show');
-                            this.setAttribute('aria-expanded', 'false');
-                        }
-                    }
-                }
-            });
-            
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!dropdownToggleEl.contains(e.target) && !dropdownToggleEl.nextElementSibling?.contains(e.target)) {
-                    const dropdownMenu = dropdownToggleEl.nextElementSibling;
-                    if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
-                        dropdownMenu.classList.remove('show');
-                        dropdownToggleEl.classList.remove('show');
-                        dropdownToggleEl.setAttribute('aria-expanded', 'false');
-                    }
-                }
-            });
-        });
-        
         // Mobile menu toggle
         const navbarToggler = document.querySelector('.navbar-toggler');
         const navbarCollapse = document.querySelector('.navbar-collapse');
