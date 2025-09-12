@@ -25,13 +25,13 @@
     <link rel="stylesheet" href="css/downloads.css?v=1.0.1">
     <link rel="stylesheet" href="css/leadership.css?v=1.0.1">
     <link rel="stylesheet" href="css/fix-blue-nav.css">
+    <link rel="stylesheet" href="css/nav-styles.css">
     <link rel="stylesheet" href="css/nav-fix.css">
     <link rel="stylesheet" href="css/logo-styles.css">
     
     <!-- Bootstrap JS Bundle with Popper (moved to bottom) -->
     
     <!-- Mobile Menu Fix -->
-    <style>
         /* Reset body padding since navbar is hidden */
         body {
             padding-top: 0;
@@ -540,14 +540,44 @@
 
     <!-- Main Navigation -->
     
-    <!-- Navigation Bar with Logo Only -->
+    <!-- Navigation Bar with Logo and Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark main-nav px-0">
         <div class="container-fluid gx-0">
             <a class="navbar-brand" href="index.html">
                 <img src="./images/2025_07_14_13_42_IMG_2808.PNG" alt="Federal Ministry of Women Affairs Logo" class="fmwa-logo">
-                <div class="vertical-line" style="border-left: 2px solid #ffffff; height: 60px; margin: 0 20px; display: block !important;"></div>
+                <div class="vertical-line"></div>
                 <div class="ministry-name">FEDERAL MINISTRY OF WOMEN AFFAIRS</div>
             </a>
+            
+            <!-- Navigation Items -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="departmentsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+                            <li><a class="dropdown-item" href="departments/child-development.html">Child Development</a></li>
+                            <li><a class="dropdown-item" href="departments/community-development-social-intervention.html">Community Development</a></li>
+                            <li><a class="dropdown-item" href="departments/finance-accounting.html">Finance & Accounting</a></li>
+                            <li><a class="dropdown-item" href="departments/gender-affairs.html">Gender Affairs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 

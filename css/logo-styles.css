@@ -26,16 +26,18 @@
 
 /* Vertical line - using border for better visibility */
 .vertical-line {
+    content: '';
     display: block !important;
-    width: 0 !important;
+    width: 2px !important;
     height: 60px !important;
     margin: 0 20px !important;
-    border-left: 2px solid #ffffff !important;
+    background-color: #ffffff !important;
     position: relative;
     z-index: 1000;
     padding: 0 !important;
     flex-shrink: 0;
     align-self: center;
+    border: none !important;
 }
 
 /* Ministry name styles */
