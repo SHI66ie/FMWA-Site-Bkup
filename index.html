@@ -17,6 +17,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/header-fix.css">
     <link rel="stylesheet" href="css/style.css?v=1.0.1">
     <link rel="stylesheet" href="css/header.css?v=1.0.1">
     <link rel="stylesheet" href="css/welcome.css?v=1.0.1">
@@ -33,6 +34,7 @@
     <link rel="stylesheet" href="css/logo-styles.css">
     <link rel="stylesheet" href="css/fix-navbar-position.css">
     <link rel="stylesheet" href="css/footer-styles.css">
+    <link rel="stylesheet" href="css/force-header-fix.css">
     
     <!-- JavaScript -->
     <script src="js/main.js"></script>
@@ -454,11 +456,12 @@
 </head>
 <body>
     <!-- Main Navigation -->
-    <nav class="bg-[#014903] shadow-md py-0 px-4 text-white fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto flex flex-wrap justify-between items-center">
-            <a href="index.html" class="flex items-center flex-shrink-0 py-2">
-                <img src="./images/2025_07_14_13_42_IMG_2808.PNG" alt="Federal Ministry of Women Affairs Logo" class="header-logo">
-                <div class="ml-4 text-sm md:text-base font-bold leading-tight">FEDERAL MINISTRY OF WOMEN AFFAIRS</div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/2025_07_14_13_42_IMG_2808.PNG" alt="Federal Ministry of Women Affairs Logo" class="header-logo me-3">
+                <span class="fmwa-navbar-title">FEDERAL MINISTRY OF WOMEN AFFAIRS</span>
+            </a>
             </a>
             
             <!-- Mobile menu button -->

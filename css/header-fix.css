@@ -1,21 +1,35 @@
 /* Header Fixes */
 .navbar {
-    background-color: #006837 !important; /* Dark green background */
-    padding: 0.5rem 1rem;
+    background-color: #014903 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar-brand {
-    padding: 0;
-    margin-right: 1rem;
-    display: flex;
-    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100px;
 }
 
 .fmwa-logo-stretch {
-    height: 60px;
-    width: auto;
+    height: 100px !important;
+    width: auto !important;
     margin-right: 15px;
+    object-fit: contain;
+}
+
+.header-logo {
+    height: 100px !important;
+    width: auto !important;
+    object-fit: contain !important;
 }
 
 .fmwa-navbar-title {

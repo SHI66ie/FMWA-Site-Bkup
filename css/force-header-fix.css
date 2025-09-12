@@ -1,0 +1,59 @@
+/* Force header to top and fix logo size */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 100px !important;
+}
+
+/* Force header to top */
+header, 
+.navbar, 
+.bg-\[\#014903\], 
+.navbar-expand-lg, 
+.navbar-dark,
+.fixed-top {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #014903 !important;
+    min-height: 100px !important;
+    height: 100px !important;
+    max-height: 100px !important;
+}
+
+/* Fix logo size */
+.navbar-brand,
+.navbar-brand img,
+.header-logo,
+.fmwa-logo-stretch,
+.bg-\[\#014903\] img {
+    height: 100px !important;
+    width: auto !important;
+    max-height: 100px !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Reset any conflicting styles */
+* {
+    margin-top: 0 !important;
+}
+
+/* Make sure content doesn't hide behind fixed header */
+main, section, .container {
+    margin-top: 100px !important;
+}
+
+/* Remove any potential spacing */
+:root {
+    --header-height: 100px !important;
+}
